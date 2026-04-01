@@ -333,6 +333,21 @@
     .cat-year, .cat-type { display: none; }
     #sonic, #contact, #heritage { padding: 80px 24px; }
   }
+
+/* ── HAMBURGER MENU ── */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+.hamburger span{display:block;width:22px;height:1px;background:var(--text-dim);transition:all 0.3s ease;}
+.hamburger:hover span{background:var(--text-bright);}
+.hamburger.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(8,8,8,0.98);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:32px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.4em;color:var(--text-dim);text-decoration:none;text-transform:uppercase;transition:color 0.2s;}
+.mobile-menu a:hover{color:var(--text-bright);}
+.mobile-close{position:absolute;top:28px;right:28px;background:none;border:none;color:var(--text-dim);font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.3em;cursor:pointer;text-transform:uppercase;}
+@media(max-width:900px){.hamburger{display:flex;}}
+
 </style>
 </head>
 <body>
@@ -384,15 +399,15 @@
     <div class="modal-body">
       <p>All music, audio recordings, visual content, and brand assets associated with 3 Percent Global Inc. and its affiliated artists are protected by copyright and may not be used without explicit written authorization.</p>
       <h3>Master Recording Licenses</h3>
-      <p>To license a master recording from the 3PG catalog for use in film, television, advertising, digital media, or any other commercial or non-commercial context, a formal licensing request must be submitted to licensing@3percent.global. All requests are reviewed on a case-by-case basis. Licensing fees vary based on usage type, territory, duration, and media.</p>
+      <p>To license a master recording from the 3PG catalog for use in film, television, advertising, digital media, or any other commercial or non-commercial context, a formal licensing request must be submitted to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c6aaafa5a3a8b5afa8a186f5b6a3b4a5a3a8b2e8a1aaa9a4a7aa">[email&#160;protected]</a>. All requests are reviewed on a case-by-case basis. Licensing fees vary based on usage type, territory, duration, and media.</p>
       <h3>Synchronization Licenses</h3>
       <p>Synchronization licenses — allowing music to be paired with visual media — require both a master recording license (issued by 3PG) and a synchronization license (issued by the publishing rights holder). 3PG coordinates both when applicable.</p>
       <h3>Sampling & Interpolation</h3>
-      <p>Unauthorized sampling or interpolation of any master recordings or compositions within the 3PG catalog is strictly prohibited. All sample clearances must be obtained prior to recording, release, or distribution. Contact licensing@3percent.global to initiate the clearance process.</p>
+      <p>Unauthorized sampling or interpolation of any master recordings or compositions within the 3PG catalog is strictly prohibited. All sample clearances must be obtained prior to recording, release, or distribution. Contact <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ee82878d8b809d878089aedd9e8b9c8d8b809ac08982818c8f82">[email&#160;protected]</a> to initiate the clearance process.</p>
       <h3>Brand & Visual Assets</h3>
       <p>The 3PG logo, wordmark, and all associated visual identities may not be reproduced, modified, or used in any commercial context without written permission from 3 Percent Global Inc.</p>
       <h3>Contact</h3>
-      <p>All licensing inquiries: licensing@3percent.global</p>
+      <p>All licensing inquiries: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="74181d17111a071d1a13344704110617111a005a13181b161518">[email&#160;protected]</a></p>
     </div>
   </div>
 </div>
@@ -651,17 +666,17 @@
           <h2>Request<br>Alignment</h2>
           <p>Access to the 3PG infrastructure is not offered — it is earned. If you believe you operate at the required frequency, submit for evaluation. We respond to those who demonstrate alignment.</p>
           <div class="contact-links">
-            <a class="contact-link" href="mailto:info@3percent.global">
+            <a class="contact-link" href="/cdn-cgi/l/email-protection#771e19111837440712051412190359101b1815161b">
               <span class="contact-link-label">Secure</span>
-              <span class="contact-link-val">info@3percent.global</span>
+              <span class="contact-link-val"><span class="__cf_email__" data-cfemail="f69f989099b6c586938495939882d8919a9994979a">[email&#160;protected]</span></span>
             </a>
-            <a class="contact-link" href="mailto:bookings@3percent.global">
+            <a class="contact-link" href="/cdn-cgi/l/email-protection#0e6c6161656760697d4e3d7e6b7c6d6b607a206962616c6f62">
               <span class="contact-link-label">Bookings</span>
-              <span class="contact-link-val">bookings@3percent.global</span>
+              <span class="contact-link-val"><span class="__cf_email__" data-cfemail="10727f7f7b797e7763502360756273757e643e777c7f72717c">[email&#160;protected]</span></span>
             </a>
-            <a class="contact-link" href="mailto:press@3percent.global">
+            <a class="contact-link" href="/cdn-cgi/l/email-protection#215153445252611251445342444f550f464d4e43404d">
               <span class="contact-link-label">Press</span>
-              <span class="contact-link-val">press@3percent.global</span>
+              <span class="contact-link-val"><span class="__cf_email__" data-cfemail="502022352323106320352233353e247e373c3f32313c">[email&#160;protected]</span></span>
             </a>
             <a class="contact-link" href="https://instagram.com/3percentglobal" target="_blank">
               <span class="contact-link-label">Instagram</span>
@@ -708,7 +723,7 @@
 
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   let entering = false;
 
   function startEnter() {
@@ -739,8 +754,10 @@
 
   window.addEventListener('scroll', () => {
     const nav = document.getElementById('navbar');
-    if (window.scrollY > 60) nav.classList.add('scrolled');
-    else nav.classList.remove('scrolled');
+    if (nav) {
+      if (window.scrollY > 60) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    }
   });
 
   function openModal(id) {
@@ -753,12 +770,25 @@
     document.body.style.overflow = '';
   }
 
-  document.querySelectorAll('.modal-overlay').forEach(overlay => {
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) {
-        overlay.classList.remove('open');
-        document.body.style.overflow = '';
-      }
+  function toggleMobile() {
+    var menu = document.getElementById('mobile-menu');
+    var btn = document.getElementById('hamburger');
+    menu.classList.toggle('open');
+    btn.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  }
+
+  function closeMobile() {
+    document.getElementById('mobile-menu').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.modal-overlay').forEach(o => {
+      o.addEventListener('click', e => {
+        if (e.target === o) { o.classList.remove('open'); document.body.style.overflow = ''; }
+      });
     });
   });
 </script>
