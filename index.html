@@ -3,16 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="3 Percent Global — Sovereign headquarters for independent creators. Founded by Rosalvo.">
-<meta property="og:title" content="3 Percent Global — Headquarters">
-<meta property="og:url" content="https://3percent.global">
+<meta name="description" content="3 Percent Global — Sovereign headquarters. Founded by Rosalvo.">
 <title>3 Percent Global &mdash; Headquarters</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"3 Percent Global Inc.","url":"https://3percent.global","logo":"https://3percent.global/logo.png","sameAs":["https://instagram.com/3percentglobal","https://instagram.com/certifiedrosalvo"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"3 Percent Global Inc.","url":"https://3percent.global","logo":"https://3percent.global/logo.png","sameAs":["https://instagram.com/certifiedrosalvo"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicGroup","name":"Rosalvo","isni":"0000 0005 2954 2695","sameAs":["https://open.spotify.com/artist/6AWsl1xDv2sVXnWjBPgR7q","https://www.youtube.com/@Rosalvomusic"]}</script>
 <style>
 :root{--black:#080808;--deep:#0d0d0d;--surface:#111111;--border:#1a1a1a;--text:#8a8a8a;--text-dim:#444444;--text-bright:#b8b8b8;--white:#e8e8e8;}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
 body{background:var(--black);color:var(--text);font-family:'Helvetica Neue',sans-serif;font-weight:300;overflow-x:hidden;cursor:crosshair;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:rgba(8,8,8,0.95);backdrop-filter:blur(14px);}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
@@ -23,7 +21,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 48px;display:fl
 .nav-links a:hover{color:var(--text-bright);}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
 .hamburger span{display:block;width:22px;height:1px;background:var(--text-dim);transition:all 0.3s ease;}
-.hamburger:hover span{background:var(--text-bright);}
 .hamburger.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
@@ -35,8 +32,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 48px;display:fl
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.93);z-index:9000;align-items:center;justify-content:center;padding:32px;}
 .modal-overlay.open{display:flex;}
 .modal-box{background:var(--deep);border:1px solid var(--border);max-width:680px;width:100%;max-height:82vh;overflow-y:auto;padding:56px;position:relative;}
-.modal-close{position:absolute;top:20px;right:20px;background:none;border:none;color:var(--text-dim);font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.3em;cursor:pointer;text-transform:uppercase;transition:color 0.2s;}
-.modal-close:hover{color:var(--text-bright);}
+.modal-close{position:absolute;top:20px;right:20px;background:none;border:none;color:var(--text-dim);font-family:'Space Mono',monospace;font-size:9px;cursor:pointer;text-transform:uppercase;}
 .modal-title{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--white);margin-bottom:6px;}
 .modal-sub{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:0.3em;color:var(--text-dim);text-transform:uppercase;margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid var(--border);}
 .modal-body p{font-size:13px;line-height:2;color:var(--text);margin-bottom:14px;}
@@ -45,21 +41,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 48px;display:fl
 #intro.fade-out{animation:iFO 1.2s ease forwards;}
 @keyframes iFO{0%{opacity:1;}100%{opacity:0;pointer-events:none;visibility:hidden;}}
 #intro-logo{width:140px;height:140px;object-fit:contain;}
-@keyframes heartbeat{
-  0%{filter:brightness(0.28);transform:scale(1);}
-  8%{filter:brightness(0.9) drop-shadow(0 0 22px rgba(210,210,210,0.55));transform:scale(1.07);}
-  16%{filter:brightness(0.32);transform:scale(1.01);}
-  24%{filter:brightness(0.72) drop-shadow(0 0 14px rgba(190,190,190,0.38));transform:scale(1.04);}
-  36%{filter:brightness(0.28);transform:scale(1);}
-  100%{filter:brightness(0.28);transform:scale(1);}
-}
+@keyframes heartbeat{0%{filter:brightness(0.28);transform:scale(1);}8%{filter:brightness(0.9) drop-shadow(0 0 22px rgba(210,210,210,0.55));transform:scale(1.07);}16%{filter:brightness(0.32);transform:scale(1.01);}24%{filter:brightness(0.72) drop-shadow(0 0 14px rgba(190,190,190,0.38));transform:scale(1.04);}36%{filter:brightness(0.28);transform:scale(1);}100%{filter:brightness(0.28);transform:scale(1);}}
 #intro-logo.beating{animation:heartbeat 3.4s ease-in-out infinite;}
-@keyframes blazeUp{
-  0%{filter:brightness(0.28);transform:scale(1);}
-  20%{filter:brightness(1.1) drop-shadow(0 0 28px rgba(240,240,240,0.5));transform:scale(1.05);}
-  45%{filter:brightness(2.0) drop-shadow(0 0 55px rgba(255,255,255,0.8));transform:scale(1.09);}
-  100%{filter:brightness(2.6) drop-shadow(0 0 40px rgba(255,255,255,0.9));transform:scale(1.07);}
-}
+@keyframes blazeUp{0%{filter:brightness(0.28);transform:scale(1);}20%{filter:brightness(1.1) drop-shadow(0 0 28px rgba(240,240,240,0.5));transform:scale(1.05);}45%{filter:brightness(2.0) drop-shadow(0 0 55px rgba(255,255,255,0.8));transform:scale(1.09);}100%{filter:brightness(2.6) drop-shadow(0 0 40px rgba(255,255,255,0.9));transform:scale(1.07);}}
 #intro-logo.blazing{animation:blazeUp 2.2s ease forwards !important;}
 .enter-btn{display:flex;flex-direction:column;align-items:center;gap:14px;cursor:pointer;user-select:none;}
 .enter-label{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.5em;color:var(--text-dim);text-transform:uppercase;transition:color 0.3s;}
@@ -81,14 +65,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 48px;display:fl
 @keyframes blink{0%,100%{opacity:0.25;}50%{opacity:0.75;}}
 section{padding:100px 48px;max-width:1400px;margin:0 auto;}
 .sl-h{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.5em;color:var(--text-dim);text-transform:uppercase;margin-bottom:56px;display:flex;align-items:center;gap:20px;}
-.sl-h::after{content:'';flex:1;height:1px;background:var(--border);max-width:80px;}
+.sl-h::after{content:"";flex:1;height:1px;background:var(--border);max-width:80px;}
 .st{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,52px);font-weight:300;color:var(--white);letter-spacing:0.05em;margin-bottom:20px;}
 #fleet{border-top:1px solid var(--border);}
 .fleet-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:var(--border);margin-top:56px;}
 .fc{background:var(--black);padding:44px 32px;transition:background 0.3s;}
 .fc:hover{background:var(--surface);}
 .fn{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.3em;color:var(--text-dim);margin-bottom:24px;}
-.fnm{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--white);margin-bottom:6px;letter-spacing:0.05em;}
+.fnm{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--white);margin-bottom:6px;}
 .fr{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:0.25em;color:var(--text-dim);text-transform:uppercase;margin-bottom:16px;}
 .fb{font-size:12px;line-height:1.85;color:var(--text);}
 #sonic{border-top:1px solid var(--border);background:var(--deep);max-width:100%;padding:100px 48px;}
@@ -106,7 +90,6 @@ section{padding:100px 48px;max-width:1400px;margin:0 auto;}
 #bts{border-top:1px solid var(--border);}
 .vg{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;margin-top:56px;}
 .vc{background:var(--surface);border:1px solid var(--border);overflow:hidden;transition:border-color 0.3s;}
-.vc:hover{border-color:#2a2a2a;}
 .ve{width:100%;aspect-ratio:16/9;background:var(--deep);border:none;}
 .vm{padding:20px 22px;}
 .vt{font-family:'Space Mono',monospace;font-size:7px;letter-spacing:0.35em;color:var(--text-dim);text-transform:uppercase;margin-bottom:7px;}
@@ -173,221 +156,139 @@ footer{border-top:1px solid var(--border);padding:44px 48px;display:flex;align-i
 .footer-links{display:flex;gap:24px;list-style:none;}
 .footer-links a{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:0.2em;color:var(--text-dim);text-decoration:none;text-transform:uppercase;transition:color 0.2s;cursor:pointer;}
 .footer-links a:hover{color:var(--text);}
-body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:0.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");background-repeat:repeat;background-size:128px;}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:0.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");background-repeat:repeat;background-size:128px;}
 ::-webkit-scrollbar{width:2px;}::-webkit-scrollbar-track{background:var(--black);}::-webkit-scrollbar-thumb{background:var(--border);}
 @media(max-width:900px){.nav-links{display:none;}.hamburger{display:flex;}nav{padding:18px 24px;}footer{flex-direction:column;gap:16px;text-align:center;padding:36px 24px;}.footer-links{display:none;}}
 @media(max-width:768px){section{padding:72px 24px;}#sonic,#contact,#heritage{padding:72px 24px;}.sg,.al,.cg,.pls{grid-template-columns:1fr;}.ci{grid-template-columns:42px 1fr 72px;}.cy,.ctp{display:none;}}
 </style>
 </head>
 <body>
-
-<div class="modal-overlay" id="ms"><div class="modal-box"><button class="modal-close" onclick="closeModal('ms')">&#10005; Close</button><div class="modal-title">Sovereignty</div><div class="modal-sub">3 Percent Global Inc. &mdash; Declaration of Principles</div><div class="modal-body"><p>3 Percent Global Inc. operates under a foundational principle: every creator within our ecosystem owns what they create. This is not a courtesy &mdash; it is a structural requirement.</p><h3>Master Ownership</h3><p>Every artist, producer, and creator affiliated with 3PG retains full ownership of their master recordings. We do not acquire masters as a condition of partnership.</p><h3>Publishing Rights</h3><p>3PG provides publishing administration support but does not claim co-publishing rights without explicit, negotiated agreement signed by all parties.</p><h3>The 3% Standard</h3><p>Every deal within 3PG is built on transparency, equity, and the long-term sovereignty of the creator. If a deal does not serve the creator&rsquo;s long-term independence, we do not make it.</p><h3>Intellectual Property</h3><p>All trademarks, logos, and brand assets associated with &ldquo;3 Percent Global&rdquo; and &ldquo;3PG&rdquo; are the exclusive intellectual property of 3 Percent Global Inc.</p></div></div></div>
-<div class="modal-overlay" id="mp"><div class="modal-box"><button class="modal-close" onclick="closeModal('mp')">&#10005; Close</button><div class="modal-title">Publishing</div><div class="modal-sub">3 Percent Global Inc. &mdash; Music Publishing Framework</div><div class="modal-body"><p>At 3PG, we operate with full transparency around how publishing works and how we engage with it on behalf of our creators.</p><h3>What is Music Publishing?</h3><p>Music publishing refers to the administration and monetization of the underlying composition &mdash; the melody and lyrics &mdash; as distinct from the master recording.</p><h3>3PG Publishing Services</h3><p>3PG offers publishing administration including PRO registration, royalty collection, licensing coordination, and sync placement. We operate on an administration-only model.</p><h3>Royalty Splits</h3><p>Under our administration model, creators retain 100% of the songwriter share. Administration fees are agreed upon transparently before any services begin.</p><h3>Sync Licensing</h3><p>All sync deals are presented for creator approval before execution. Creators retain final approval on all placements.</p></div></div></div>
-<div class="modal-overlay" id="ml"><div class="modal-box"><button class="modal-close" onclick="closeModal('ml')">&#10005; Close</button><div class="modal-title">Licensing</div><div class="modal-sub">3 Percent Global Inc. &mdash; Licensing Guidelines</div><div class="modal-body"><p>All music, audio recordings, visual content, and brand assets associated with 3 Percent Global Inc. are protected by copyright and may not be used without explicit written authorization.</p><h3>Master Recording Licenses</h3><p>To license a master recording, submit a formal request to licensing@3percent.global. Fees vary based on usage type, territory, exclusivity, and platform.</p><h3>Synchronization Licenses</h3><p>Sync licenses require both a master recording license and a synchronization license. 3PG coordinates both when applicable.</p><h3>Sampling and Interpolation</h3><p>Unauthorized sampling or interpolation of any 3PG catalog is strictly prohibited. All clearances must be obtained in writing prior to recording or release.</p><h3>Brand and Visual Assets</h3><p>The 3PG logo and all visual identities may not be reproduced or used in any context without prior written permission.</p></div></div></div>
-<div class="modal-overlay" id="mt"><div class="modal-box"><button class="modal-close" onclick="closeModal('mt')">&#10005; Close</button><div class="modal-title">Terms of Use</div><div class="modal-sub">3 Percent Global Inc. &mdash; Effective Date: January 1, 2025</div><div class="modal-body"><p>By accessing and using the 3percent.global website, you agree to be bound by these Terms of Use.</p><h3>Intellectual Property</h3><p>All content on this website is the exclusive property of 3 Percent Global Inc. and is protected by applicable copyright and trademark laws. No content may be reproduced without prior written consent.</p><h3>Permitted Use</h3><p>You may access content for personal, non-commercial informational purposes only.</p><h3>Submissions</h3><p>Any materials sent to 3 Percent Global Inc. through this website may be used without restriction. 3PG is under no obligation to respond to any unsolicited submissions.</p><h3>Disclaimer</h3><p>This website is provided on an as-is basis. 3PG shall not be liable for any damages arising from the use of this website.</p><h3>Governing Law</h3><p>These terms are governed by applicable law. Any disputes shall be subject to the exclusive jurisdiction of the competent courts.</p></div></div></div>
-
-<div class="mobile-menu" id="mob-menu">
-  <button class="mob-close" onclick="closeMob()">&#10005; Close</button>
-  <a href="index.html" onclick="closeMob()">Home</a>
-  <a href="fleet.html" onclick="closeMob()">The Fleet</a><a href="sonic.html" onclick="closeMob()">Sonic Assets</a><a href="intel.html" onclick="closeMob()">Intel</a><a href="headquarters.html" onclick="closeMob()">Headquarters</a><a href="frequency.html" onclick="closeMob()">Frequency</a><a href="vault.html" onclick="closeMob()">The Vault</a><a href="heritage.html" onclick="closeMob()">Heritage</a><a href="archive.html" onclick="closeMob()">Archive</a><a href="access.html" onclick="closeMob()">Access</a>
-</div>
-<div id="intro">
-  <img id="intro-logo" src="logo.png" alt="3PG" class="beating">
-  <div class="enter-btn" onclick="startEnter()">
-    <span class="enter-label">Enter</span>
-    <div class="pb-track"><div class="pb-fill" id="pb-fill"></div></div>
-  </div>
-</div>
+<div class="modal-overlay" id="ms"><div class="modal-box"><button class="modal-close" onclick="closeModal('ms')">&#10005; Close</button><div class="modal-title">Sovereignty</div><div class="modal-sub">3 Percent Global Inc.</div><div class="modal-body"><p>Every creator within our ecosystem owns what they create. This is not a courtesy &mdash; it is a structural requirement.</p><h3>Master Ownership</h3><p>Every artist affiliated with 3PG retains full ownership of their master recordings. We do not acquire masters as a condition of partnership.</p><h3>The 3% Standard</h3><p>Every deal within 3PG is built on transparency, equity, and the long-term sovereignty of the creator.</p></div></div></div>
+<div class="modal-overlay" id="mp"><div class="modal-box"><button class="modal-close" onclick="closeModal('mp')">&#10005; Close</button><div class="modal-title">Publishing</div><div class="modal-sub">3 Percent Global Inc.</div><div class="modal-body"><p>3PG offers publishing administration including PRO registration, royalty collection, and sync placement. We operate on an administration-only model &mdash; without claiming ownership of your compositions.</p><h3>Royalty Splits</h3><p>Under our administration model, creators retain 100% of the songwriter share.</p></div></div></div>
+<div class="modal-overlay" id="ml"><div class="modal-box"><button class="modal-close" onclick="closeModal('ml')">&#10005; Close</button><div class="modal-title">Licensing</div><div class="modal-sub">3 Percent Global Inc.</div><div class="modal-body"><p>All music, audio recordings, visual content, and brand assets associated with 3 Percent Global Inc. are protected by copyright and may not be used without explicit written authorization.</p><h3>Master Recording Licenses</h3><p>Submit licensing requests to licensing@3percent.global.</p><h3>Sampling and Interpolation</h3><p>Unauthorized sampling of any 3PG catalog is strictly prohibited.</p></div></div></div>
+<div class="modal-overlay" id="mt"><div class="modal-box"><button class="modal-close" onclick="closeModal('mt')">&#10005; Close</button><div class="modal-title">Terms of Use</div><div class="modal-sub">3 Percent Global Inc. &mdash; Effective: January 1, 2025</div><div class="modal-body"><p>By accessing 3percent.global, you agree to these Terms of Use.</p><h3>Intellectual Property</h3><p>All content on this website is the exclusive property of 3 Percent Global Inc. No content may be reproduced without prior written consent.</p><h3>Disclaimer</h3><p>This website is provided on an as-is basis. 3PG shall not be liable for any damages arising from its use.</p></div></div></div>
+<div class="mobile-menu" id="mob-menu"><button class="mob-close" onclick="closeMob()">&#10005; Close</button><a href="index.html" onclick="closeMob()">Home</a><a href="fleet.html" onclick="closeMob()">The Fleet</a><a href="sonic.html" onclick="closeMob()">Sonic Assets</a><a href="intel.html" onclick="closeMob()">Intel</a><a href="headquarters.html" onclick="closeMob()">Headquarters</a><a href="frequency.html" onclick="closeMob()">Frequency</a><a href="vault.html" onclick="closeMob()">The Vault</a><a href="heritage.html" onclick="closeMob()">Heritage</a><a href="archive.html" onclick="closeMob()">Archive</a><a href="access.html" onclick="closeMob()">Access</a></div>
+<div id="intro"><img id="intro-logo" src="logo.png" alt="3PG" class="beating"><div class="enter-btn" onclick="startEnter()"><span class="enter-label">Enter</span><div class="pb-track"><div class="pb-fill" id="pb-fill"></div></div></div></div>
 <div id="site">
-  <nav>
-    <a href="index.html" class="nav-logo"><img src="logo.png" alt="3PG"><span class="nav-name">3PG</span></a>
-    <ul class="nav-links"><li><a href="fleet.html">The Fleet</a></li><li><a href="sonic.html">Sonic Assets</a></li><li><a href="intel.html">Intel</a></li><li><a href="headquarters.html">Headquarters</a></li><li><a href="frequency.html">Frequency</a></li><li><a href="vault.html">The Vault</a></li><li><a href="heritage.html">Heritage</a></li><li><a href="archive.html">Archive</a></li><li><a href="access.html">Access</a></li></ul>
-    <button class="hamburger" id="mob-btn" onclick="toggleMob()"><span></span><span></span><span></span></button>
-  </nav>
-  <div id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <img class="hero-logo" src="logo.png" alt="3PG">
-      <h1 class="hero-title">3 Percent Global</h1>
-      <p class="hero-subtitle">Headquarters &middot; Sovereignty &middot; Transmission</p>
-    </div>
-    <span class="hero-scroll">Scroll</span>
-  </div>
-  <section id="fleet">
-    <div class="sl-h">01 &mdash; The Fleet</div>
-    <h2 class="st">The Commanders</h2>
-    <div class="fleet-grid">
-      <div class="fc"><div class="fn">001</div><div class="fnm">Rosalvo</div><div class="fr">Founder &middot; President &middot; Main Artist</div><p class="fb">Bridging Roots and Streets. Creator of TroubaTrap &amp; KonpaTrap. Born in Montreal, rooted in Gona&iuml;ves, Haiti. The voice, the vision, the movement.</p></div>
-      <div class="fc"><div class="fn">002</div><div class="fnm">Lens Dupuy</div><div class="fr">Executive Producer &middot; Label Administrator</div><p class="fb">Founder of the TroubaTrap genre. Architect of Rosalvo&rsquo;s entire sonic universe and the operational infrastructure of 3PG. Without the architecture, there is no movement.</p></div>
-      <div class="fc"><div class="fn">003</div><div class="fnm">Jeff</div><div class="fr">Manager &middot; The Anchor</div><p class="fb">Manager of 3 Percent Global. The steady presence that keeps the operation moving &mdash; focused, reliable, and fully aligned with the mission.</p></div>
-      <div class="fc"><div class="fn">004</div><div class="fnm">Wvssiii</div><div class="fr">Composer &middot; Engineer &middot; Digital Builder</div><p class="fb">Born in Moroni, Comoros. Composer, audio engineer, developer, and multimedia creator. Sound design, visual production, code, camera &mdash; operating across disciplines with precision.</p></div>
-    </div>
-  </section>
-  <div id="sonic"><div class="si">
-    <div class="sl-h">02 &mdash; Sonic Assets</div>
-    <div class="sg">
-      <div class="sc"><img src="logo.png" alt="Asset"><span class="scl">Artwork &mdash; Classified</span></div>
-      <div class="sif">
-        <h2>Just Because I&rsquo;m Haytian:<br>Troubatrap Konpa Deluxe</h2>
-        <div class="sa">Rosalvo &middot; 3 Percent Global</div>
-        <p class="sd">The full statement. A transmission fusing twoubadou, konpa, zouk, and trap into something the world had no name for until Rosalvo named it. Masters fully owned. Every note sovereign.</p>
-        <div class="rd">Available Now</div>
-        <a href="sonic.html" class="cb">View Full Catalogue</a>
-      </div>
-    </div>
-  </div></div>
-  <section id="bts">
-    <div class="sl-h">03 &mdash; Intel</div>
-    <h2 class="st">Inside The Command</h2>
-    <div class="vg">
-      <div class="vc"><iframe class="ve" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="BTS" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="vm"><div class="vt">Behind The Command</div><div class="vn">Inside HQ &mdash; Session 01</div></div></div>
-      <div class="vc"><iframe class="ve" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Podcast" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="vm"><div class="vt">Frequency Podcast</div><div class="vn">Episode 01 &mdash; The Origins of 3%</div></div></div>
-      <div class="vc"><iframe class="ve" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="BTS Studio" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="vm"><div class="vt">Behind The Command</div><div class="vn">BTS &mdash; Studio Moments</div></div></div>
-    </div>
-  </section>
-  <section id="about">
-    <div class="sl-h">04 &mdash; Headquarters</div>
-    <div class="al">
-      <div class="aa"><img src="logo.png" alt="3PG"></div>
-      <div class="at">
-        <p class="lg">3 Percent Global is not a record label. It is a Headquarters &mdash; a sovereign ecosystem built for those who refused to wait for permission.</p>
-        <p>Founded in Montreal by Rosalvo &mdash; 3PG was born from a simple and irreversible decision: to build something real, something lasting, on terms that belong to no one but the creators themselves.</p>
-        <p>The name comes from a simple observation: in any field, only 3% of people operate at the level required to build something that lasts. The other 97% are waiting. The 3% build regardless.</p>
-        <p>We are a federation of sovereign commanders. Not employees. Not artists waiting to be discovered. Builders who understand that true power is built &mdash; not given.</p>
-      </div>
-    </div>
-    <div class="pls">
-      <div class="pl"><div class="pn">&mdash; 01</div><h3>Matrix Mastery</h3><p>Understanding the systems that govern money, culture, and power &mdash; and operating above them.</p></div>
-      <div class="pl"><div class="pn">&mdash; 02</div><h3>Financial Sovereignty</h3><p>Every master owned. Every deal built on equity. We build for 50 years from now.</p></div>
-      <div class="pl"><div class="pn">&mdash; 03</div><h3>Spiritual Alignment</h3><p>We do not manufacture. We transmit. Spirit before strategy &mdash; always.</p></div>
-      <div class="pl"><div class="pn">&mdash; 04</div><h3>Knowledge Transmission</h3><p>What we learn, we pass forward. The tools of liberation are shared &mdash; city to city, generation to generation.</p></div>
-    </div>
-  </section>
-  <section id="vault">
-    <div class="sl-h">05 &mdash; The Vault</div>
-    <h2 class="st">Knowledge &amp; Tools</h2>
-    <div class="vltg">
-      <div class="vlti"><div class="vltic">&mdash; Sovereignty</div><div class="vltit">Masters &amp; Ownership</div><p class="vltid">Everything you need to understand music rights and how to own what you create.</p></div>
-      <div class="vlti"><div class="vltic">&mdash; Finance</div><div class="vltit">Building Wealth</div><p class="vltid">From first streams to generational assets. The financial architecture of a sovereign operator.</p></div>
-      <div class="vlti"><div class="vltic">&mdash; Alignment</div><div class="vltit">Mental Sovereignty</div><p class="vltid">Frameworks for operating with clarity and grounding in an industry built to extract.</p></div>
-      <div class="vlti"><div class="vltic">&mdash; Transmission</div><div class="vltit">Legacy Building</div><p class="vltid">How to structure your work so that what you build outlives the moment.</p></div>
-    </div>
-  </section>
-  <section id="frequency">
-    <div class="sl-h">06 &mdash; Frequency</div>
-    <h2 class="st">All Transmissions</h2>
-    <div class="cl">
-      <div class="ci"><span class="cn">001</span><span class="ct">Just Because I&rsquo;m Haytian II</span><span class="ca">Rosalvo</span><span class="cy">2026</span><span class="ctp">Project</span></div>
-      <div class="ci"><span class="cn">002</span><span class="ct">Lajan feat. Marginal</span><span class="ca">Rosalvo</span><span class="cy">2025</span><span class="ctp">Single</span></div>
-      <div class="ci"><span class="cn">003</span><span class="ct">Just Because I&rsquo;m Haytian: Troubatrap Konpa Deluxe</span><span class="ca">Rosalvo</span><span class="cy">2024</span><span class="ctp">Album</span></div>
-      <div class="ci"><span class="cn">004</span><span class="ct">Troubatrap</span><span class="ca">Rosalvo</span><span class="cy">2024</span><span class="ctp">Single</span></div>
-    </div>
-  </section>
-  <div id="heritage"><div class="hi">
-    <div class="sl-h" style="justify-content:center;">07 &mdash; Heritage</div>
-    <p class="lg">We did not arrive here by accident. Born in Montreal. Rooted in Gona&iuml;ves, in Moroni, in the streets and the ancestral memory that no industry can buy or erase.<br><br>3 Percent Global is their answer.</p>
-  </div></div>
-  <section id="archive">
-    <div class="sl-h">08 &mdash; Archive</div>
-    <h2 class="st">The Record</h2>
-    <div class="ag">
-      <div class="ai"><div class="ay">2024</div><div class="at2">Founding of 3PG</div><div class="ad">The Headquarters is established in Montreal.</div></div>
-      <div class="ai"><div class="ay">2024</div><div class="at2">Troubatrap</div><div class="ad">The single that named the genre. Masters fully owned.</div></div>
-      <div class="ai"><div class="ay">2024</div><div class="at2">Just Because I&rsquo;m Haytian: Troubatrap Konpa Deluxe</div><div class="ad">The album. The catalogue grows.</div></div>
-      <div class="ai"><div class="ay">2025</div><div class="at2">Lajan feat. Marginal</div><div class="ad">The Caribbean signal. The frequency reaches the islands.</div></div>
-      <div class="ai"><div class="ay">2026</div><div class="at2">3:33</div><div class="ad">Incoming transmission.</div></div>
-      <div class="ai"><div class="ay">2026</div><div class="at2">Deep Waters</div><div class="ad">Incoming transmission.</div></div>
-    </div>
-  </section>
-  <div id="contact"><div class="ci2">
-    <div class="sl-h">09 &mdash; Access</div>
-    <div class="cg">
-      <div class="cif">
-        <h2>Request<br>Alignment</h2>
-        <p>Access to the 3PG infrastructure is not offered &mdash; it is earned. Submit for evaluation if you operate at the required frequency.</p>
-        <div class="cls">
-          <a class="clk" href="mailto:mgmt@3percent.global"><span class="cll">Management</span><span class="clv">mgmt@3percent.global</span></a>
-          <a class="clk" href="mailto:info@3percent.global"><span class="cll">General</span><span class="clv">info@3percent.global</span></a>
-          <a class="clk" href="mailto:press@3percent.global"><span class="cll">Press</span><span class="clv">press@3percent.global</span></a>
-          <a class="clk" href="https://instagram.com/certifiedrosalvo" target="_blank"><span class="cll">Instagram</span><span class="clv">@certifiedrosalvo</span></a>
-        </div>
-      </div>
-      <div class="cff">
-        <div class="ff"><label>Full Name</label><input type="text" placeholder="Your name"></div>
-        <div class="ff"><label>Email</label><input type="email" placeholder="your@email.com"></div>
-        <div class="ff"><label>Nature of Request</label><select><option value="">Select</option><option>Alignment Evaluation</option><option>Artist Submission</option><option>Brand Partnership</option><option>Press Inquiry</option><option>Booking</option><option>General</option></select></div>
-        <div class="ff"><label>Statement of Intent</label><textarea rows="4" placeholder="Demonstrate your alignment..."></textarea></div>
-        <div class="fs"><button class="sb">Submit for Evaluation</button></div>
-      </div>
-    </div>
-  </div></div>
-  <footer>
-    <div class="footer-logo"><img src="logo.png" alt="3PG"><span class="footer-name">3 Percent Global Inc.</span></div>
-    <ul class="footer-links">
-      <li><a onclick="openModal('ms')">Sovereignty</a></li>
-      <li><a onclick="openModal('mp')">Publishing</a></li>
-      <li><a onclick="openModal('ml')">Licensing</a></li>
-      <li><a onclick="openModal('mt')">Terms</a></li>
-    </ul>
-    <span class="footer-copy">&copy; 2025 3 Percent Global Inc.</span>
-  </footer>
+<nav><a href="index.html" class="nav-logo"><img src="logo.png" alt="3PG"><span class="nav-name">3PG</span></a><ul class="nav-links"><li><a href="fleet.html">The Fleet</a></li><li><a href="sonic.html">Sonic Assets</a></li><li><a href="intel.html">Intel</a></li><li><a href="headquarters.html">Headquarters</a></li><li><a href="frequency.html">Frequency</a></li><li><a href="vault.html">The Vault</a></li><li><a href="heritage.html">Heritage</a></li><li><a href="archive.html">Archive</a></li><li><a href="access.html">Access</a></li></ul><button class="hamburger" id="mob-btn" onclick="toggleMob()"><span></span><span></span><span></span></button></nav>
+<div id="hero"><div class="hero-bg"></div><div class="hero-content"><img class="hero-logo" src="logo.png" alt="3PG"><h1 class="hero-title">3 Percent Global</h1><p class="hero-subtitle">Headquarters &middot; Sovereignty &middot; Transmission</p></div><span class="hero-scroll">Scroll</span></div>
+<section id="fleet"><div class="sl-h">01 &mdash; The Fleet</div><h2 class="st">The Commanders</h2><div class="fleet-grid">
+<div class="fc"><div class="fn">001</div><div class="fnm">Rosalvo</div><div class="fr">Founder &middot; President &middot; Main Artist</div><p class="fb">Bridging Roots and Streets. Creator of TroubaTrap &amp; KonpaTrap. Born in Montreal, rooted in Gona&iuml;ves, Haiti.</p></div>
+<div class="fc"><div class="fn">002</div><div class="fnm">Lens Dupuy</div><div class="fr">Executive Producer &middot; Label Administrator</div><p class="fb">Founder of the TroubaTrap genre. Architect of Rosalvo&rsquo;s entire sonic universe and the operational infrastructure of 3PG.</p></div>
+<div class="fc"><div class="fn">003</div><div class="fnm">Jeff</div><div class="fr">Manager &middot; The Anchor</div><p class="fb">Manager of 3 Percent Global. The steady presence that keeps the operation moving &mdash; focused, reliable, and fully aligned with the mission.</p></div>
+<div class="fc"><div class="fn">004</div><div class="fnm">Wvssiii</div><div class="fr">Composer &middot; Engineer &middot; Digital Builder</div><p class="fb">Born in Moroni, Comoros. Composer, audio engineer, developer, and multimedia creator operating across disciplines with precision.</p></div>
+</div></section>
+<div id="sonic"><div class="si"><div class="sl-h">02 &mdash; Sonic Assets</div><div class="sg">
+<div class="sc"><img src="logo.png" alt="Asset"><span class="scl">Artwork &mdash; Classified</span></div>
+<div class="sif"><h2>Just Because I&rsquo;m Haytian:<br>Troubatrap Konpa Deluxe</h2><div class="sa">Rosalvo &middot; 3 Percent Global</div><p class="sd">The full statement. A transmission fusing twoubadou, konpa, zouk, and trap. Masters fully owned. Every note sovereign.</p><div class="rd">Available Now</div><a href="sonic.html" class="cb">View Full Catalogue</a></div>
+</div></div></div>
+<section id="bts"><div class="sl-h">03 &mdash; Intel</div><h2 class="st">Inside The Command</h2><div class="vg">
+<div class="vc"><iframe class="ve" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="BTS" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="vm"><div class="vt">Behind The Command</div><div class="vn">Inside HQ &mdash; Session 01</div></div></div>
+<div class="vc"><iframe class="ve" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Podcast" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="vm"><div class="vt">Frequency Podcast</div><div class="vn">Episode 01 &mdash; The Origins of 3%</div></div></div>
+<div class="vc"><iframe class="ve" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="BTS Studio" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="vm"><div class="vt">Behind The Command</div><div class="vn">BTS &mdash; Studio Moments</div></div></div>
+</div></section>
+<section id="about"><div class="sl-h">04 &mdash; Headquarters</div><div class="al">
+<div class="aa"><img src="logo.png" alt="3PG"></div>
+<div class="at"><p class="lg">3 Percent Global is not a record label. It is a Headquarters &mdash; a sovereign ecosystem built for those who refused to wait for permission.</p><p>Founded in Montreal by Rosalvo &mdash; 3PG was born from a simple and irreversible decision: to build something real, something lasting, on terms that belong to no one but the creators themselves.</p><p>The name comes from a simple observation: in any field, only 3% of people operate at the level required to build something that lasts. The other 97% are waiting. The 3% build regardless.</p><p>We are a federation of sovereign commanders. Not employees. Not artists waiting to be discovered. Builders who understand that true power is built &mdash; not given.</p></div>
+</div><div class="pls">
+<div class="pl"><div class="pn">&mdash; 01</div><h3>Matrix Mastery</h3><p>Understanding the systems that govern money, culture, and power &mdash; and operating above them.</p></div>
+<div class="pl"><div class="pn">&mdash; 02</div><h3>Financial Sovereignty</h3><p>Every master owned. Every deal built on equity. We build for 50 years from now.</p></div>
+<div class="pl"><div class="pn">&mdash; 03</div><h3>Spiritual Alignment</h3><p>We do not manufacture. We transmit. Spirit before strategy &mdash; always.</p></div>
+<div class="pl"><div class="pn">&mdash; 04</div><h3>Knowledge Transmission</h3><p>What we learn, we pass forward &mdash; city to city, generation to generation.</p></div>
+</div></section>
+<section id="vault"><div class="sl-h">05 &mdash; The Vault</div><h2 class="st">Knowledge &amp; Tools</h2><div class="vltg">
+<div class="vlti"><div class="vltic">&mdash; Sovereignty</div><div class="vltit">Masters &amp; Ownership</div><p class="vltid">Everything you need to understand music rights and how to own what you create.</p></div>
+<div class="vlti"><div class="vltic">&mdash; Finance</div><div class="vltit">Building Wealth</div><p class="vltid">From first streams to generational assets. The financial architecture of a sovereign operator.</p></div>
+<div class="vlti"><div class="vltic">&mdash; Alignment</div><div class="vltit">Mental Sovereignty</div><p class="vltid">Frameworks for operating with clarity and grounding in an industry built to extract.</p></div>
+<div class="vlti"><div class="vltic">&mdash; Transmission</div><div class="vltit">Legacy Building</div><p class="vltid">How to structure your work so that what you build outlives the moment.</p></div>
+</div></section>
+<section id="frequency"><div class="sl-h">06 &mdash; Frequency</div><h2 class="st">All Transmissions</h2><div class="cl">
+<div class="ci"><span class="cn">001</span><span class="ct">Just Because I&rsquo;m Haytian II</span><span class="ca">Rosalvo</span><span class="cy">2026</span><span class="ctp">Project</span></div>
+<div class="ci"><span class="cn">002</span><span class="ct">Lajan feat. Marginal</span><span class="ca">Rosalvo</span><span class="cy">2025</span><span class="ctp">Single</span></div>
+<div class="ci"><span class="cn">003</span><span class="ct">Just Because I&rsquo;m Haytian: Troubatrap Konpa Deluxe</span><span class="ca">Rosalvo</span><span class="cy">2024</span><span class="ctp">Album</span></div>
+<div class="ci"><span class="cn">004</span><span class="ct">Troubatrap</span><span class="ca">Rosalvo</span><span class="cy">2024</span><span class="ctp">Single</span></div>
+</div></section>
+<div id="heritage"><div class="hi"><div class="sl-h" style="justify-content:center;">07 &mdash; Heritage</div><p class="lg">We did not arrive here by accident. Born in Montreal. Rooted in Gona&iuml;ves, in Moroni, in the streets and the ancestral memory that no industry can buy or erase.<br><br>3 Percent Global is their answer.</p></div></div>
+<section id="archive"><div class="sl-h">08 &mdash; Archive</div><h2 class="st">The Record</h2><div class="ag">
+<div class="ai"><div class="ay">2024</div><div class="at2">Founding of 3PG</div><div class="ad">The Headquarters is established in Montreal.</div></div>
+<div class="ai"><div class="ay">2024</div><div class="at2">Troubatrap</div><div class="ad">The single that named the genre.</div></div>
+<div class="ai"><div class="ay">2024</div><div class="at2">Just Because I&rsquo;m Haytian: Troubatrap Konpa Deluxe</div><div class="ad">The album. The catalogue grows.</div></div>
+<div class="ai"><div class="ay">2025</div><div class="at2">Lajan feat. Marginal</div><div class="ad">The Caribbean signal.</div></div>
+<div class="ai"><div class="ay">2026</div><div class="at2">3:33</div><div class="ad">Incoming transmission.</div></div>
+<div class="ai"><div class="ay">2026</div><div class="at2">Deep Waters</div><div class="ad">Incoming transmission.</div></div>
+</div></section>
+<div id="contact"><div class="ci2"><div class="sl-h">09 &mdash; Access</div><div class="cg">
+<div class="cif"><h2>Request<br>Alignment</h2><p>Access to the 3PG infrastructure is not offered &mdash; it is earned.</p><div class="cls">
+<a class="clk" href="mailto:mgmt@3percent.global"><span class="cll">Management</span><span class="clv">mgmt@3percent.global</span></a>
+<a class="clk" href="mailto:info@3percent.global"><span class="cll">General</span><span class="clv">info@3percent.global</span></a>
+<a class="clk" href="mailto:press@3percent.global"><span class="cll">Press</span><span class="clv">press@3percent.global</span></a>
+<a class="clk" href="https://instagram.com/certifiedrosalvo" target="_blank"><span class="cll">Instagram</span><span class="clv">@certifiedrosalvo</span></a>
+</div></div>
+<div class="cff">
+<div class="ff"><label>Full Name</label><input type="text" placeholder="Your name"></div>
+<div class="ff"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+<div class="ff"><label>Nature of Request</label><select><option value="">Select</option><option>Alignment Evaluation</option><option>Artist Submission</option><option>Brand Partnership</option><option>Press Inquiry</option><option>Booking</option><option>General</option></select></div>
+<div class="ff"><label>Statement of Intent</label><textarea rows="4" placeholder="Demonstrate your alignment..."></textarea></div>
+<div class="fs"><button class="sb">Submit for Evaluation</button></div>
+</div></div></div></div>
+<footer><div class="footer-logo"><img src="logo.png" alt="3PG"><span class="footer-name">3 Percent Global Inc.</span></div><ul class="footer-links"><li><a onclick="openModal('ms')">Sovereignty</a></li><li><a onclick="openModal('mp')">Publishing</a></li><li><a onclick="openModal('ml')">Licensing</a></li><li><a onclick="openModal('mt')">Terms</a></li></ul><span class="footer-copy">&copy; 2025 3 Percent Global Inc.</span></footer>
 </div>
 <script>
 function startEnter() {
-  var logo = document.getElementById('intro-logo');
-  var fill = document.getElementById('pb-fill');
+  var logo = document.getElementById("intro-logo");
+  var fill = document.getElementById("pb-fill");
   if (!logo || !fill) return;
-  logo.classList.remove('beating');
-  logo.classList.add('blazing');
-  fill.classList.add('loading');
+  logo.classList.remove("beating");
+  logo.classList.add("blazing");
+  fill.classList.add("loading");
   var p = 0;
   var iv = setInterval(function() {
     p += Math.random() * 4 + 1;
     if (p >= 100) {
       p = 100;
       clearInterval(iv);
-      fill.style.width = '100%';
+      fill.style.width = "100%";
       setTimeout(function() {
-        var intro = document.getElementById('intro');
-        if (intro) intro.classList.add('fade-out');
+        var intro = document.getElementById("intro");
+        if (intro) intro.classList.add("fade-out");
         setTimeout(function() {
-          var intro2 = document.getElementById('intro');
-          var site = document.getElementById('site');
-          if (intro2) intro2.style.display = 'none';
-          if (site) site.classList.add('visible');
+          var i2 = document.getElementById("intro");
+          var site = document.getElementById("site");
+          if (i2) i2.style.display = "none";
+          if (site) site.classList.add("visible");
         }, 1200);
       }, 400);
     }
-    fill.style.width = p + '%';
+    fill.style.width = p + "%";
   }, 40);
 }
 function openModal(id) {
   var el = document.getElementById(id);
-  if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  if (el) { el.classList.add("open"); document.body.style.overflow = "hidden"; }
 }
 function closeModal(id) {
   var el = document.getElementById(id);
-  if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+  if (el) { el.classList.remove("open"); document.body.style.overflow = ""; }
 }
 function toggleMob() {
-  var m = document.getElementById('mob-menu');
-  var b = document.getElementById('mob-btn');
+  var m = document.getElementById("mob-menu");
+  var b = document.getElementById("mob-btn");
   if (!m || !b) return;
-  m.classList.toggle('open');
-  b.classList.toggle('open');
-  document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+  m.classList.toggle("open");
+  b.classList.toggle("open");
+  document.body.style.overflow = m.classList.contains("open") ? "hidden" : "";
 }
 function closeMob() {
-  var m = document.getElementById('mob-menu');
-  var b = document.getElementById('mob-btn');
-  if (m) m.classList.remove('open');
-  if (b) b.classList.remove('open');
-  document.body.style.overflow = '';
+  var m = document.getElementById("mob-menu");
+  var b = document.getElementById("mob-btn");
+  if (m) m.classList.remove("open");
+  if (b) b.classList.remove("open");
+  document.body.style.overflow = "";
 }
-window.addEventListener('load', function() {
-  document.querySelectorAll('.modal-overlay').forEach(function(o) {
-    o.addEventListener('click', function(e) {
-      if (e.target === o) { o.classList.remove('open'); document.body.style.overflow = ''; }
+window.addEventListener("load", function() {
+  document.querySelectorAll(".modal-overlay").forEach(function(o) {
+    o.addEventListener("click", function(e) {
+      if (e.target === o) { o.classList.remove("open"); document.body.style.overflow = ""; }
     });
   });
 });
