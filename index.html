@@ -180,13 +180,11 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;o
 <div class="fc"><div class="fn">005</div><div class="fnm">Annaicart Mazile</div><div class="fr">Creative Director &middot; Image Architect</div><p class="fb">Creative Director of 3PG. Visual identity of the label and its commanders. Host of <em>Limen Limy&egrave;</em>. Pr&eacute;sidente of adndphaiti.com.</p></div>
 </div></section>
 <div id="sonic"><div class="si"><div class="sl-h">02 &mdash; Sonic Assets</div><div class="sg">
-<div class="sc"><img src="logo.png" alt="Asset"><span class="scl">Artwork &mdash; Classified</span></div>
+<div class="sc" id="idx-thumb"><img src="logo.png" alt="Asset" id="idx-thumb-img" style="width:100%;height:100%;object-fit:cover;opacity:0.7;filter:brightness(0.6);"><span class="scl" id="idx-thumb-label">Latest Release</span></div>
 <div class="sif"><h2>Just Because I&rsquo;m Haytian:<br>Troubatrap Konpa Deluxe</h2><div class="sa">Rosalvo &middot; 3 Percent Global</div><p class="sd">The full statement. A transmission fusing twoubadou, konpa, zouk, and trap. Masters fully owned. Every note sovereign.</p><div class="rd">&#8471; 3 Percent Global Inc. &mdash; All Rights Reserved</div><a href="sonic.html" class="cb">View Full Catalogue</a></div>
 </div></div></div>
-<section id="bts"><div class="sl-h">03 &mdash; Intel</div><h2 class="st">Inside The Command</h2><div class="vg">
-<div class="vc"><iframe class="ve" src="https://www.youtube.com/embed/pMpkePdlQ7Y" title="JBIH" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="vm"><div class="vt">Official Video</div><div class="vn">Just Because I&rsquo;m Haytian: Troubatrap Konpa Deluxe</div></div></div>
-<div class="vc"><iframe class="ve" src="https://www.youtube.com/embed/MoN9JGMu8tU" title="Troubatrap" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="vm"><div class="vt">Official Video</div><div class="vn">Troubatrap</div></div></div>
-<div class="vc"><iframe class="ve" src="https://www.youtube.com/embed/af47_AsSGh0" title="Lajan" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="vm"><div class="vt">Official Video</div><div class="vn">Lajan feat. Marginal</div></div></div>
+<section id="bts"><div class="sl-h">03 &mdash; Intel</div><h2 class="st">Inside The Command</h2><div class="vg" id="idx-yt-grid">
+<div style="padding:20px;font-family:'Space Mono',monospace;font-size:8px;letter-spacing:0.3em;color:var(--text-dim);text-transform:uppercase;">Loading transmissions...</div>
 </div></section>
 <section id="about"><div class="sl-h">04 &mdash; Headquarters</div><div class="al">
 <div class="aa"><img src="logo.png" alt="3PG"></div>
@@ -274,6 +272,75 @@ window.addEventListener("load", function() {
     });
   });
 });
+</script>
+<script>
+(function() {
+  var API_KEY = 'AIzaSyAlyzt3E4vESCR9dEi7VPrdF4dx6QCJoik';
+  var CHANNEL_ID = 'UCzqzHXpUcyyp_M1qpyyTv0w';
+
+  function isOfficial(title, channelTitle) {
+    if (channelTitle && channelTitle.toLowerCase().includes(' - topic')) return false;
+    if (title && title.toLowerCase().includes('provided to youtube')) return false;
+    return true;
+  }
+
+  function loadIndexVideos() {
+    fetch('https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=' + CHANNEL_ID + '&key=' + API_KEY)
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        var uploadsId = data.items[0].contentDetails.relatedPlaylists.uploads;
+        return fetch('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=20&playlistId=' + uploadsId + '&key=' + API_KEY);
+      })
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        var videos = data.items.filter(function(v) {
+          return isOfficial(v.snippet.title, v.snippet.videoOwnerChannelTitle || '');
+        });
+
+        // Update artwork thumbnail with latest video
+        var latest = videos[0];
+        if (latest) {
+          var thumb = document.getElementById('idx-thumb-img');
+          var label = document.getElementById('idx-thumb-label');
+          if (thumb && latest.snippet.thumbnails && latest.snippet.thumbnails.high) {
+            thumb.src = latest.snippet.thumbnails.high.url;
+            thumb.style.filter = 'brightness(0.55)';
+          }
+          if (label) label.textContent = 'Latest Release';
+        }
+
+        // Fill the 3 video cards
+        var grid = document.getElementById('idx-yt-grid');
+        if (!grid) return;
+        grid.innerHTML = '';
+        var top3 = videos.slice(0, 3);
+        top3.forEach(function(v) {
+          var vid = v.snippet.resourceId.videoId;
+          var title = v.snippet.title;
+          var card = document.createElement('div');
+          card.className = 'vc';
+          card.innerHTML = '<iframe class="ve" src="https://www.youtube.com/embed/' + vid + '" title="' + title.replace(/"/g,"'") + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
+            '<div class="vm"><div class="vt">Official Video</div><div class="vn">' + title + '</div></div>';
+          grid.appendChild(card);
+        });
+      })
+      .catch(function(err) {
+        // Fallback
+        var grid = document.getElementById('idx-yt-grid');
+        if (grid) {
+          grid.innerHTML = '<div class="vc"><iframe class="ve" src="https://www.youtube.com/embed/pMpkePdlQ7Y" title="JBIH" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="vm"><div class="vt">Official Video</div><div class="vn">Just Because I'm Haytian: Troubatrap Konpa Deluxe</div></div></div>' +
+            '<div class="vc"><iframe class="ve" src="https://www.youtube.com/embed/MoN9JGMu8tU" title="Troubatrap" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="vm"><div class="vt">Official Video</div><div class="vn">Troubatrap</div></div></div>' +
+            '<div class="vc"><iframe class="ve" src="https://www.youtube.com/embed/af47_AsSGh0" title="Lajan" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="vm"><div class="vt">Official Video</div><div class="vn">Lajan feat. Marginal</div></div></div>';
+        }
+      });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadIndexVideos);
+  } else {
+    loadIndexVideos();
+  }
+})();
 </script>
 </body>
 </html>
