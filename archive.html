@@ -96,6 +96,8 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 .modal-body ul{margin:0 0 16px 20px;}
 .modal-body ul li{font-size:13px;line-height:2;color:var(--text);}
 
+.av-loading{grid-column:1/-1;display:flex;align-items:center;justify-content:center;padding:48px;border:1px solid var(--border);background:var(--surface);}
+.av-msg{font-family:"Space Mono",monospace;font-size:8px;letter-spacing:0.3em;color:var(--text-dim);text-transform:uppercase;}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicGroup","name":"Rosalvo","url":"https://3percent.global","isni":"0000 0005 2954 2695","sameAs":["https://open.spotify.com/artist/6AWsl1xDv2sVXnWjBPgR7q","https://www.youtube.com/@Rosalvomusic","https://instagram.com/certifiedrosalvo"]}</script>
 </head>
@@ -164,17 +166,18 @@ function closeMob(){
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal('ms')">&#10005; Close</button>
     <div class="modal-title">Sovereignty</div>
-    <div class="modal-sub">3 Percent Global Inc. &mdash; Core Principle</div>
+    <div class="modal-sub">3 Percent Global Inc.</div>
     <div class="modal-body">
       <p>Sovereignty is not a word we use lightly. It is the foundation on which every decision at 3 Percent Global is made. Every master owned. Every contract built on equity. Every deal structured to serve the creator &mdash; not extract from them.</p>
       <h3>Master Ownership</h3>
-      <p>Every artist signed to 3PG retains full ownership of their master recordings. The label holds the rights corporately &mdash; but the artist, as founder or signee, benefits directly from the value those masters generate. No external party owns what we build.</p>
-      <h3>Publishing Control</h3>
-      <p>3 Percent Global is a registered publisher with SOCAN. The 50% publisher share on every composition stays within the ecosystem &mdash; not in the black boxes of intermediaries. Every stream, every radio spin, every sync generates revenue that comes back to the creators.</p>
+      <p>Every artist within the 3PG ecosystem owns what they create. This is not a courtesy &mdash; it is a structural requirement. No external party holds rights over what is built here.</p>
+      <h3>No Permission Required</h3>
+      <p>3PG was built to eliminate the need to ask for permission &mdash; from labels, from systems, from anyone. The infrastructure exists so that creators can operate at the highest level on their own terms.</p>
       <h3>The 3% Standard</h3>
       <p>Every partnership, every deal, every collaboration is evaluated against one question: does this serve the long-term sovereignty of the creators involved? If the answer is no &mdash; we don't do it.</p>
     </div>
   </div>
+</div>
 </div>
 <div class="modal-overlay" id="mp">
   <div class="modal-box">
@@ -235,5 +238,34 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.qu
 document.querySelectorAll('.modal-overlay').forEach(function(o){o.addEventListener('click',function(e){if(e.target===o){closeModal(o.id);}});});
 </script>
 
+<script>
+(function(){
+  var KEY="AIzaSyAlyzt3E4vESCR9dEi7VPrdF4dx6QCJoik";
+  var CID="UCc04wZtJ4-26KWbQJmrw4bg";
+  var box=document.getElementById("archive-videos");
+  if(!box)return;
+  function fallback(){box.innerHTML='<div class="av-loading"><span class="av-msg">Transmissions incoming.</span></div>';}
+  fetch("https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id="+CID+"&key="+KEY)
+  .then(function(r){return r.json();})
+  .then(function(d){
+    if(!d.items||!d.items[0]){fallback();return;}
+    var uid=d.items[0].contentDetails.relatedPlaylists.uploads;
+    return fetch("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=12&playlistId="+uid+"&key="+KEY);
+  })
+  .then(function(r){if(r)return r.json();})
+  .then(function(d){
+    if(!d||!d.items||!d.items.length){fallback();return;}
+    var h="";
+    for(var i=0;i<d.items.length;i++){
+      var v=d.items[i].snippet.resourceId.videoId;
+      var t=d.items[i].snippet.title.replace(/"/g,"'");
+      var yr=d.items[i].snippet.publishedAt?d.items[i].snippet.publishedAt.substring(0,4):"";
+      h+='<div class="vc2"><iframe class="ve2" src="https://www.youtube.com/embed/'+v+'" title="'+t+'" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="vm2"><div class="vt2">3PG &middot; '+yr+'</div><div class="vn2">'+t+'</div></div></div>';
+    }
+    box.innerHTML=h;
+  })
+  .catch(fallback);
+})();
+</script>
 </body>
 </html>
