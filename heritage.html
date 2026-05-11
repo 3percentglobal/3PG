@@ -77,46 +77,50 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 .hp h3{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--white);font-weight:400;margin-bottom:14px;}
 .hp p{font-size:13px;line-height:2;color:var(--text);}
 @media(max-width:768px){.hpg{grid-template-columns:1fr;}}
+
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.93);z-index:9000;align-items:center;justify-content:center;padding:32px;}
 .modal-overlay.open{display:flex;}
-.modal-box{background:var(--deep);border:1px solid var(--border);max-width:680px;width:100%;max-height:82vh;overflow-y:auto;padding:56px;position:relative;}
-.modal-close{position:absolute;top:20px;right:20px;background:none;border:none;color:var(--text-dim);font-family:'Space Mono',monospace;font-size:9px;cursor:pointer;text-transform:uppercase;}
-.modal-title{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--white);margin-bottom:6px;}
+.modal-box{background:var(--deep);border:1px solid var(--border);max-width:720px;width:100%;max-height:88vh;overflow-y:auto;padding:56px;position:relative;}
+.modal-close{position:absolute;top:20px;right:20px;background:none;border:none;color:var(--text-dim);font-family:'Space Mono',monospace;font-size:9px;cursor:pointer;text-transform:uppercase;letter-spacing:0.3em;}
+.modal-title{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--white);margin-bottom:6px;}
 .modal-sub{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:0.3em;color:var(--text-dim);text-transform:uppercase;margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid var(--border);}
-.modal-body p{font-size:13px;line-height:2;color:var(--text);margin-bottom:14px;}
-.modal-body h3{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--text-bright);font-weight:400;margin:24px 0 8px;}
+.modal-body p{font-size:13px;line-height:2.1;color:var(--text);margin-bottom:16px;}
+.modal-body h3{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--text-bright);font-weight:400;margin:28px 0 10px;}
+.modal-body ul{margin:0 0 16px 20px;}
+.modal-body ul li{font-size:13px;line-height:2;color:var(--text);}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicGroup","name":"Rosalvo","url":"https://3percent.global","isni":"0000 0005 2954 2695","sameAs":["https://open.spotify.com/artist/6AWsl1xDv2sVXnWjBPgR7q","https://www.youtube.com/@Rosalvomusic","https://instagram.com/certifiedrosalvo"]}</script>
 </head>
 <body>
 <div class="mobile-menu" id="mob-menu">
   <button class="mob-close" onclick="closeMob()">&#10005; Close</button>
-  <a href="index.html" onclick="closeMob()">Home</a>
+  <a href="index.html" onclick="sessionStorage.setItem('3pg_entered','1');closeMob()">Home</a>
   <a href="fleet.html" onclick="closeMob()">The Fleet</a><a href="sonic.html" onclick="closeMob()">Sonic Assets</a><a href="intel.html" onclick="closeMob()">Intel</a><a href="headquarters.html" onclick="closeMob()">Headquarters</a><a href="frequency.html" onclick="closeMob()">Frequency</a><a href="vault.html" onclick="closeMob()">The Vault</a><a href="heritage.html" onclick="closeMob()">Heritage</a><a href="archive.html" onclick="closeMob()">Archive</a><a href="access.html" onclick="closeMob()">Access</a><a href="https://tms.3percent.global" target="_blank" onclick="closeMob()">Certified</a>
 </div>
-<nav><a href="index.html" class="nav-logo"><img src="logo.png" alt="3PG"><span class="nav-name">3PG</span></a><ul class="nav-links"><li><a href="fleet.html">The Fleet</a></li><li><a href="sonic.html">Sonic Assets</a></li><li><a href="intel.html">Intel</a></li><li><a href="headquarters.html">Headquarters</a></li><li><a href="frequency.html">Frequency</a></li><li><a href="vault.html">The Vault</a></li><li><a href="heritage.html" class="active">Heritage</a></li><li><a href="archive.html">Archive</a></li><li><a href="access.html">Access</a></li><li><a href="https://tms.3percent.global" target="_blank">Certified</a></li></ul><button class="hamburger" id="mob-btn" onclick="toggleMob()"><span></span><span></span><span></span></button></nav>
-<div class="page-hero"><div class="phc"><div class="page-label">07 &mdash; Heritage</div><h1 class="page-title">Heri-<br>tage</h1><p class="page-subtitle">The Origin &middot; The Mission &middot; The Infrastructure</p></div></div>
+<nav><a href="index.html" class="nav-logo" onclick="sessionStorage.setItem('3pg_entered','1')"><img src="logo.png" alt="3PG"><span class="nav-name">3PG</span></a><ul class="nav-links"><li><a href="fleet.html">The Fleet</a></li><li><a href="sonic.html">Sonic Assets</a></li><li><a href="intel.html">Intel</a></li><li><a href="headquarters.html">Headquarters</a></li><li><a href="frequency.html">Frequency</a></li><li><a href="vault.html">The Vault</a></li><li><a href="heritage.html" class="active">Heritage</a></li><li><a href="archive.html">Archive</a></li><li><a href="access.html">Access</a></li><li><a href="https://tms.3percent.global" target="_blank">Certified</a></li></ul><button class="hamburger" id="mob-btn" onclick="toggleMob()"><span></span><span></span><span></span></button></nav>
+<div class="page-hero"><div class="phc"><div class="page-label">07 &mdash; Heritage</div><h1 class="page-title">Heri-<br>tage</h1><p class="page-subtitle">Gona&iuml;ves &middot; Moroni &middot; Montreal &middot; The World</p></div></div>
 
 <div class="cw">
-  <div class="sl">The Origin</div>
+  <div class="sl">The Root System</div>
   <div class="hb">
-    <p class="lg">3 Percent Global was not built in a boardroom. It was built in the mind of two kids from Montreal who understood something most people never will &mdash; that the system was not designed for them, and that was not a problem. It was a signal.</p>
-    <p>It started around 2013&ndash;2014. Fritz-Jo&euml;l Clerveaux and a childhood friend had a concept taking shape &mdash; something they called the 3 Percent. Not a company. Not a label. A way of seeing the world. They moved with it through high school, started a movement, and watched others follow. Two young people with a vision that was bigger than anything around them could contain.</p>
-    <p>The concept was simple and total: understand the matrix you operate in. Know who you are. Constantly improve yourself. Build financial freedom &mdash; not as a goal, but as a foundation. Share your resources. Transmit your knowledge. Lift the people around you. Stay aligned with something greater than the material. Be your own boss. Never stop learning. Never stop growing. Never stop trying to understand the universe you live in.</p>
-    <div class="hq"><p>&ldquo;97% of people are waiting. For permission. For the right moment. For someone to open the door. The 3% build the door themselves &mdash; and then they leave it open for the next person.&rdquo;</p><span>&mdash; Fritz-Jo&euml;l Clerveaux, Founder</span></div>
-    <p>What started as a movement between two friends became a structure. Fritz-Jo&euml;l took the concept further, deeper, more concrete &mdash; and over years of deliberate construction, 3 Percent Global became what it is today: an infrastructure built entirely outside the systems most people take for granted.</p>
-    <p>Not a label that signs artists and takes their masters. Not a company that plays by rules written by people who never had their interests in mind. An ecosystem &mdash; for music, for real estate, for finance, for every domain where sovereign operators need a structure that matches their level.</p>
+    <p class="lg">We did not arrive here by accident. We are the continuation of something ancient &mdash; something that was never given permission to exist, and existed anyway.</p>
+    <p>3 Percent Global is built on the understanding that we carry more than our own history. Rosalvo and Lens Dupuy were born in Montreal but rooted in Gona&iuml;ves, Haiti. Wvssiii was born in Moroni, Comoros. The cities are different. The roots are the same &mdash; a tradition of building without permission, of carrying culture across oceans and into rooms that were never designed to receive it.</p>
+    <p>Heritage, for us, is not nostalgia. It is infrastructure. Understanding where we come from &mdash; culturally, spiritually, and historically &mdash; is what makes every decision we make more intentional. The twoubadou, the konpa, the sounds of the Caribbean and the Indian Ocean &mdash; these are not just influences. They are the foundation.</p>
+    <p>Troubatrap was not created in a vacuum. It was created by people who understood exactly where they came from and refused to leave it behind when they entered new territory. That is the heritage of 3PG.</p>
+    <div class="hq"><p>&ldquo;They tried to bury us. They did not know we were seeds.&rdquo;</p><span>&mdash; Dinos Christianopoulos</span></div>
+    <div class="hq"><p>&ldquo;Bridging Roots and Streets.&rdquo;</p><span>&mdash; Rosalvo</span></div>
+    <p>This section is dedicated to the root system. To the artists, thinkers, and ancestors whose work made our work possible. To the cultural lineage &mdash; Haitian, Comorian, Caribbean, African &mdash; that we carry and are responsible to continue. To the knowledge that was passed down so we could pass it forward.</p>
     <hr class="divider">
-    <div class="sl">The Three Pillars</div>
     <div class="hpg">
-      <div class="hp"><div class="hpl">&mdash; 01</div><h3>Music &amp; Culture</h3><p>The first pillar and the most visible. 3PG operates as a full-stack music infrastructure &mdash; masters owned, publishing controlled, distribution sovereign. Not a label that extracts. A structure that amplifies. Built for indie artists and labels who want the power of a major without surrendering what they built.</p></div>
-      <div class="hp"><div class="hpl">&mdash; 02</div><h3>Real Estate &amp; Capital</h3><p>Wealth built in music must be converted into something permanent. Real estate is one of the oldest forms of sovereignty. 3PG is building the infrastructure for aligned operators to access, understand, and move in this space &mdash; without gatekeepers, without the usual barriers designed to keep certain people out.</p></div>
-      <div class="hp"><div class="hpl">&mdash; 03</div><h3>Knowledge &amp; Transmission</h3><p>The third pillar is the one that multiplies everything else. What 3PG learns, it transmits. The Vault is the beginning. The mission is to build a living body of knowledge &mdash; about money, about rights, about systems, about self &mdash; that reaches the people who need it most and changes what they believe is possible.</p></div>
-      <div class="hp"><div class="hpl">&mdash; The Standard</div><h3>Built from the Root. Open to the World.</h3><p>3 Percent Global was built with a specific depth &mdash; and that depth is what makes it strong enough to hold anyone. The only criteria for alignment is the decision to operate outside the 97%. Where you come from is your power. What you build with it is your legacy.</p></div>
+      <div class="hp"><div class="hpl">&mdash; Haitian Roots</div><h3>Gona&iuml;ves &mdash; The City of Independence</h3><p>Rosalvo and Lens Dupuy are rooted in Gona&iuml;ves &mdash; the city where Haiti declared its independence in 1804. The first Black republic in the world. The 3PG ethos of sovereignty is not abstract. It is ancestral.</p></div>
+      <div class="hp"><div class="hpl">&mdash; Comorian Roots</div><h3>Moroni &mdash; The Island Frequency</h3><p>Wvssiii was born in Moroni, Comoros &mdash; a small island nation in the Indian Ocean with a vast cultural heritage. His presence in 3PG is a signal that this ecosystem is not limited by geography. The frequency travels.</p></div>
+      <div class="hp"><div class="hpl">&mdash; TroubaTrap Origins</div><h3>A Genre Born from Memory</h3><p>TroubaTrap was created by fusing the twoubadou &mdash; the traditional Haitian troubadour tradition &mdash; with modern trap. It is not a gimmick. It is a cultural act of preservation and evolution, carried out in real time, with full respect for what came before.</p></div>
+      <div class="hp"><div class="hpl">&mdash; Forward Transmission</div><h3>What We Owe the Next Generation</h3><p>Heritage is not just about looking back. Every module in The Vault, every podcast episode, every piece of knowledge transmitted through 3PG is a letter to someone who is not born yet. We take that responsibility seriously.</p></div>
     </div>
   </div>
 </div>
-<footer><div class="footer-logo"><img src="logo.png" alt="3PG"><span class="footer-name">3 Percent Global Inc.</span></div><ul class="footer-links"><li><a onclick="openModal('ms')">Sovereignty</a></li><li><a onclick="openModal('mp')">Publishing</a></li><li><a onclick="openModal('ml')">Licensing</a></li><li><a onclick="openModal('mt')">Terms</a></li></ul><span class="footer-copy">&#8471; 2026 3 Percent Global Inc.</span></footer>
+<footer><div class="footer-logo"><img src="logo.png" alt="3PG"><span class="footer-name">3 Percent Global Inc.</span></div><ul class="footer-links"><li><a onclick="openModal('ms')" style="cursor:pointer;">Sovereignty</a></li><li><a onclick="openModal('mp')" style="cursor:pointer;">Publishing</a></li><li><a onclick="openModal('ml')" style="cursor:pointer;">Licensing</a></li><li><a onclick="openModal('mt')" style="cursor:pointer;">Terms</a></li></ul><span class="footer-copy">&#8471; 2026 3 Percent Global Inc.</span></footer>
 <script>
 function toggleMob(){
   var m=document.getElementById('mob-menu');
@@ -134,5 +138,81 @@ function closeMob(){
   document.body.style.overflow='';
 }
 </script>
+
+<div class="modal-overlay" id="ms">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('ms')">&#10005; Close</button>
+    <div class="modal-title">Sovereignty</div>
+    <div class="modal-sub">3 Percent Global Inc. &mdash; Core Principle</div>
+    <div class="modal-body">
+      <p>Sovereignty is not a word we use lightly. It is the foundation on which every decision at 3 Percent Global is made. Every master owned. Every contract built on equity. Every deal structured to serve the creator &mdash; not extract from them.</p>
+      <h3>Master Ownership</h3>
+      <p>Every artist signed to 3PG retains full ownership of their master recordings. The label holds the rights corporately &mdash; but the artist, as founder or signee, benefits directly from the value those masters generate. No external party owns what we build.</p>
+      <h3>Publishing Control</h3>
+      <p>3 Percent Global is a registered publisher with SOCAN. The 50% publisher share on every composition stays within the ecosystem &mdash; not in the black boxes of intermediaries. Every stream, every radio spin, every sync generates revenue that comes back to the creators.</p>
+      <h3>The 3% Standard</h3>
+      <p>Every partnership, every deal, every collaboration is evaluated against one question: does this serve the long-term sovereignty of the creators involved? If the answer is no &mdash; we don't do it.</p>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="mp">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('mp')">&#10005; Close</button>
+    <div class="modal-title">Publishing</div>
+    <div class="modal-sub">3 Percent Global Inc.</div>
+    <div class="modal-body">
+      <p>Every composition created within the 3PG ecosystem is protected, registered, and monetized globally. We do not leave money on the table &mdash; and we do not leave our creators unprotected.</p>
+      <h3>What This Means</h3>
+      <p>Every time a 3PG composition plays anywhere in the world &mdash; on a stream, on the radio, in a film, in a venue &mdash; the publishing revenue comes back to the ecosystem. Not to intermediaries. Not to third parties. Here.</p>
+      <h3>Our Model</h3>
+      <p>Creators keep what they create. The label administers &mdash; it does not own. No songwriter ever transfers ownership of their compositions to 3 Percent Global. We collect on your behalf. You keep your work.</p>
+      <h3>Global, Without Exception</h3>
+      <p>The 3PG catalogue is registered and protected in 210+ countries. Every market. Every platform. Every use. If someone uses the music, the ecosystem gets paid.</p>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="ml">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('ml')">&#10005; Close</button>
+    <div class="modal-title">Licensing</div>
+    <div class="modal-sub">3 Percent Global Inc. &mdash; All Rights Reserved</div>
+    <div class="modal-body">
+      <p>All music, audio recordings, visual content, brand assets, and intellectual property associated with 3 Percent Global Inc. and its artists are fully protected under Canadian and international copyright law. No content may be used, reproduced, or distributed without explicit written authorization.</p>
+      <h3>Sync Licensing</h3>
+      <p>We actively pursue sync placements for the 3PG catalogue in film, television, advertising, and interactive media. Licensing fees range based on usage, territory, and exclusivity. All sync requests are reviewed and negotiated directly by the label.</p>
+      <h3>Master Use Licenses</h3>
+      <p>Any use of a master recording from the 3PG catalogue requires a master use license. Submit all requests to licensing@3percent.global with the following information: project description, intended use, territory, duration, and budget.</p>
+      <h3>Sampling & Interpolation</h3>
+      <p>Unauthorized sampling or interpolation of any 3PG catalogue is strictly prohibited and will be pursued legally. All clearance requests must be submitted in writing before any recording begins.</p>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="mt">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('mt')">&#10005; Close</button>
+    <div class="modal-title">Terms of Use</div>
+    <div class="modal-sub">3 Percent Global Inc. &mdash; Effective January 1, 2025</div>
+    <div class="modal-body">
+      <p>By accessing and using 3percent.global, you agree to be bound by these Terms of Use. If you do not agree, please do not use this website.</p>
+      <h3>Intellectual Property</h3>
+      <p>All content on this website &mdash; including but not limited to text, images, audio, video, logos, and design &mdash; is the exclusive property of 3 Percent Global Inc. and is protected by copyright. No content may be reproduced, distributed, or used without prior written consent.</p>
+      <h3>Permitted Use</h3>
+      <p>This website is provided for informational purposes only. You may browse and access content for personal, non-commercial use. Any commercial use, redistribution, or modification of content is strictly prohibited.</p>
+      <h3>Submissions</h3>
+      <p>Any information submitted through the Access form becomes the property of 3 Percent Global Inc. and may be used to evaluate alignment. We do not sell or share submitted information with third parties.</p>
+      <h3>Disclaimer</h3>
+      <p>This website is provided on an as-is basis. 3 Percent Global Inc. makes no warranties, expressed or implied, regarding the accuracy or completeness of any content. The label shall not be liable for any damages arising from the use of this website.</p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function openModal(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.modal-overlay').forEach(function(o){o.classList.remove('open');});document.body.style.overflow='';}});
+document.querySelectorAll('.modal-overlay').forEach(function(o){o.addEventListener('click',function(e){if(e.target===o){closeModal(o.id);}});});
+</script>
+
 </body>
 </html>
