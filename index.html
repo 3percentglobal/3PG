@@ -166,12 +166,9 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;o
 </style>
 </head>
 <body>
-<div class="modal-overlay" id="ms"><div class="modal-box"><button class="modal-close" onclick="closeModal('ms')">&#10005; Close</button><div class="modal-title">Sovereignty</div><div class="modal-sub">3 Percent Global Inc.</div><div class="modal-body"><p>Every creator within our ecosystem owns what they create. This is not a courtesy &mdash; it is a structural requirement.</p><h3>Master Ownership</h3><p>Every artist affiliated with 3PG retains full ownership of their master recordings.</p><h3>The 3% Standard</h3><p>Every deal within 3PG is built on transparency, equity, and the long-term sovereignty of the creator.</p></div></div></div>
-<div class="modal-overlay" id="mp"><div class="modal-box"><button class="modal-close" onclick="closeModal('mp')">&#10005; Close</button><div class="modal-title">Publishing</div><div class="modal-sub">3 Percent Global Inc.</div><div class="modal-body"><p>3PG offers publishing administration including PRO registration, royalty collection, and sync placement. We operate on an administration-only model without claiming ownership of your compositions.</p><h3>Royalty Splits</h3><p>Under our administration model, creators retain 100% of the songwriter share.</p></div></div></div>
-<div class="modal-overlay" id="ml"><div class="modal-box"><button class="modal-close" onclick="closeModal('ml')">&#10005; Close</button><div class="modal-title">Licensing</div><div class="modal-sub">3 Percent Global Inc.</div><div class="modal-body"><p>All music, audio recordings, visual content, and brand assets are protected by copyright and may not be used without explicit written authorization.</p><h3>Master Recording Licenses</h3><p>Submit licensing requests to licensing@3percent.global.</p><h3>Sampling and Interpolation</h3><p>Unauthorized sampling of any 3PG catalog is strictly prohibited.</p></div></div></div>
-<div class="modal-overlay" id="mt"><div class="modal-box"><button class="modal-close" onclick="closeModal('mt')">&#10005; Close</button><div class="modal-title">Terms of Use</div><div class="modal-sub">3 Percent Global Inc. &mdash; Effective: January 1, 2025</div><div class="modal-body"><p>By accessing 3percent.global, you agree to these Terms of Use.</p><h3>Intellectual Property</h3><p>All content on this website is the exclusive property of 3 Percent Global Inc. No content may be reproduced without prior written consent.</p><h3>Disclaimer</h3><p>This website is provided on an as-is basis. 3PG shall not be liable for any damages arising from its use.</p></div></div></div>
+<script>if(sessionStorage.getItem("3pg_entered")&&(window.location.pathname==="/"||window.location.pathname==="/index.html"||window.location.pathname==="")){var _iw=document.getElementById("intro-wrap");if(_iw)_iw.style.display="none";var _sw=document.getElementById("site-wrap");if(_sw){_sw.style.opacity="1";_sw.style.visibility="visible";}}</script>
 <div class="mobile-menu" id="mob-menu"><button class="mob-close" onclick="closeMob()">&#10005; Close</button><a href="index.html" onclick="closeMob()">Home</a><a href="fleet.html" onclick="closeMob()">The Fleet</a><a href="sonic.html" onclick="closeMob()">Sonic Assets</a><a href="intel.html" onclick="closeMob()">Intel</a><a href="headquarters.html" onclick="closeMob()">Headquarters</a><a href="frequency.html" onclick="closeMob()">Frequency</a><a href="vault.html" onclick="closeMob()">The Vault</a><a href="heritage.html" onclick="closeMob()">Heritage</a><a href="archive.html" onclick="closeMob()">Archive</a><a href="access.html" onclick="closeMob()">Access</a><a href="https://tms.3percent.global" target="_blank" onclick="closeMob()">Certified</a></div>
-<div id="intro"><img id="intro-logo" src="logo.png" alt="3PG" class="beating"><div class="enter-btn" onclick="startEnter()"><span class="enter-label">Enter</span><div class="pb-track"><div class="pb-fill" id="pb-fill"></div></div></div></div>
+<div id="intro"><img id="intro-logo" src="logo.png" alt="3PG" class="beating"><div class="enter-btn" onclick="sessionStorage.setItem('3pg_entered','1');startEnter()"><span class="enter-label">Enter</span><div class="pb-track"><div class="pb-fill" id="pb-fill"></div></div></div></div>
 <div id="site">
 <nav><a href="index.html" class="nav-logo"><img src="logo.png" alt="3PG"><span class="nav-name">3PG</span></a><ul class="nav-links"><li><a href="fleet.html">The Fleet</a></li><li><a href="sonic.html">Sonic Assets</a></li><li><a href="intel.html">Intel</a></li><li><a href="headquarters.html">Headquarters</a></li><li><a href="frequency.html">Frequency</a></li><li><a href="vault.html">The Vault</a></li><li><a href="heritage.html">Heritage</a></li><li><a href="archive.html">Archive</a></li><li><a href="access.html">Access</a></li><li><a href="https://tms.3percent.global" target="_blank">Certified</a></li></ul><button class="hamburger" id="mob-btn" onclick="toggleMob()"><span></span><span></span><span></span></button></nav>
 <div id="hero"><div class="hero-bg"></div><div class="hero-content"><img class="hero-logo" src="logo.png" alt="3PG"><h1 class="hero-title">3 Percent Global</h1><p class="hero-subtitle">Global Sovereignty Infrastructure &middot; Command Node</p></div><span class="hero-scroll">Scroll</span></div>
@@ -223,10 +220,10 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;o
 <div class="ai"><div class="ay">2020</div><div class="at2">Deep Waters</div><div class="ad">Incoming transmission.</div></div>
 </div></section>
 <div id="contact"><div class="ci2"><div class="sl-h">09 &mdash; Access</div><div class="cg"><div class="cif"><h2>Request<br>Alignment</h2><p>Access to the 3PG infrastructure is not offered &mdash; it is earned.</p><div class="cls"><a class="clk" href="mailto:mgmt@3percent.global"><span class="cll">Management</span><span class="clv">mgmt@3percent.global</span></a><a class="clk" href="mailto:info@3percent.global"><span class="cll">General</span><span class="clv">info@3percent.global</span></a><a class="clk" href="mailto:press@3percent.global"><span class="cll">Press</span><span class="clv">press@3percent.global</span></a><a class="clk" href="https://instagram.com/3percentglobal" target="_blank"><span class="cll">Instagram</span><span class="clv">@3percentglobal</span></a></div></div><div class="cff"><div class="ff"><label>Full Name</label><input type="text" placeholder="Your name"></div><div class="ff"><label>Email</label><input type="email" placeholder="your@email.com"></div><div class="ff"><label>Nature of Request</label><select><option value="">Select</option><option>Alignment Evaluation</option><option>Artist Submission</option><option>Brand Partnership</option><option>Press Inquiry</option><option>Booking</option><option>General</option></select></div><div class="ff"><label>Statement of Intent</label><textarea rows="4" placeholder="Demonstrate your alignment..."></textarea></div><div class="fs"><button class="sb">Submit for Evaluation</button></div></div></div></div></div>
-<footer><div class="footer-logo"><img src="logo.png" alt="3PG"><span class="footer-name">3 Percent Global Inc.</span></div><ul class="footer-links"><li><a onclick="openModal('ms')">Sovereignty</a></li><li><a onclick="openModal('mp')">Publishing</a></li><li><a onclick="openModal('ml')">Licensing</a></li><li><a onclick="openModal('mt')">Terms</a></li></ul><span class="footer-copy">&#8471; 2026 3 Percent Global Inc.</span></footer>
+<footer><div class="footer-logo"><img src="logo.png" alt="3PG"><span class="footer-name">3 Percent Global Inc.</span></div><ul class="footer-links"><li><a onclick="openModal('ms')" style="cursor:pointer;">Sovereignty</a></li><li><a onclick="openModal('mp')" style="cursor:pointer;">Publishing</a></li><li><a onclick="openModal('ml')" style="cursor:pointer;">Licensing</a></li><li><a onclick="openModal('mt')" style="cursor:pointer;">Terms</a></li></ul><span class="footer-copy">&#8471; 2026 3 Percent Global Inc.</span></footer>
 </div>
 <script>
-function startEnter() {
+function startEnter(){ sessionStorage.setItem("3pg_entered","1"); {
   var logo = document.getElementById("intro-logo");
   var fill = document.getElementById("pb-fill");
   if (!logo || !fill) return;
@@ -315,5 +312,81 @@ window.addEventListener("load", function() {
     .catch(function() { /* keep hardcoded fallback */ });
 });
 </script>
+
+<div class="modal-overlay" id="ms">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('ms')">&#10005; Close</button>
+    <div class="modal-title">Sovereignty</div>
+    <div class="modal-sub">3 Percent Global Inc. &mdash; Core Principle</div>
+    <div class="modal-body">
+      <p>Sovereignty is not a word we use lightly. It is the foundation on which every decision at 3 Percent Global is made. Every master owned. Every contract built on equity. Every deal structured to serve the creator &mdash; not extract from them.</p>
+      <h3>Master Ownership</h3>
+      <p>Every artist signed to 3PG retains full ownership of their master recordings. The label holds the rights corporately &mdash; but the artist, as founder or signee, benefits directly from the value those masters generate. No external party owns what we build.</p>
+      <h3>Publishing Control</h3>
+      <p>3 Percent Global is a registered publisher with SOCAN. The 50% publisher share on every composition stays within the ecosystem &mdash; not in the black boxes of intermediaries. Every stream, every radio spin, every sync generates revenue that comes back to the creators.</p>
+      <h3>The 3% Standard</h3>
+      <p>Every partnership, every deal, every collaboration is evaluated against one question: does this serve the long-term sovereignty of the creators involved? If the answer is no &mdash; we don't do it.</p>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="mp">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('mp')">&#10005; Close</button>
+    <div class="modal-title">Publishing</div>
+    <div class="modal-sub">3 Percent Global Inc.</div>
+    <div class="modal-body">
+      <p>Every composition created within the 3PG ecosystem is protected, registered, and monetized globally. We do not leave money on the table &mdash; and we do not leave our creators unprotected.</p>
+      <h3>What This Means</h3>
+      <p>Every time a 3PG composition plays anywhere in the world &mdash; on a stream, on the radio, in a film, in a venue &mdash; the publishing revenue comes back to the ecosystem. Not to intermediaries. Not to third parties. Here.</p>
+      <h3>Our Model</h3>
+      <p>Creators keep what they create. The label administers &mdash; it does not own. No songwriter ever transfers ownership of their compositions to 3 Percent Global. We collect on your behalf. You keep your work.</p>
+      <h3>Global, Without Exception</h3>
+      <p>The 3PG catalogue is registered and protected in 210+ countries. Every market. Every platform. Every use. If someone uses the music, the ecosystem gets paid.</p>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="ml">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('ml')">&#10005; Close</button>
+    <div class="modal-title">Licensing</div>
+    <div class="modal-sub">3 Percent Global Inc. &mdash; All Rights Reserved</div>
+    <div class="modal-body">
+      <p>All music, audio recordings, visual content, brand assets, and intellectual property associated with 3 Percent Global Inc. and its artists are fully protected under Canadian and international copyright law. No content may be used, reproduced, or distributed without explicit written authorization.</p>
+      <h3>Sync Licensing</h3>
+      <p>We actively pursue sync placements for the 3PG catalogue in film, television, advertising, and interactive media. Licensing fees range based on usage, territory, and exclusivity. All sync requests are reviewed and negotiated directly by the label.</p>
+      <h3>Master Use Licenses</h3>
+      <p>Any use of a master recording from the 3PG catalogue requires a master use license. Submit all requests to licensing@3percent.global with the following information: project description, intended use, territory, duration, and budget.</p>
+      <h3>Sampling & Interpolation</h3>
+      <p>Unauthorized sampling or interpolation of any 3PG catalogue is strictly prohibited and will be pursued legally. All clearance requests must be submitted in writing before any recording begins.</p>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="mt">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('mt')">&#10005; Close</button>
+    <div class="modal-title">Terms of Use</div>
+    <div class="modal-sub">3 Percent Global Inc. &mdash; Effective January 1, 2025</div>
+    <div class="modal-body">
+      <p>By accessing and using 3percent.global, you agree to be bound by these Terms of Use. If you do not agree, please do not use this website.</p>
+      <h3>Intellectual Property</h3>
+      <p>All content on this website &mdash; including but not limited to text, images, audio, video, logos, and design &mdash; is the exclusive property of 3 Percent Global Inc. and is protected by copyright. No content may be reproduced, distributed, or used without prior written consent.</p>
+      <h3>Permitted Use</h3>
+      <p>This website is provided for informational purposes only. You may browse and access content for personal, non-commercial use. Any commercial use, redistribution, or modification of content is strictly prohibited.</p>
+      <h3>Submissions</h3>
+      <p>Any information submitted through the Access form becomes the property of 3 Percent Global Inc. and may be used to evaluate alignment. We do not sell or share submitted information with third parties.</p>
+      <h3>Disclaimer</h3>
+      <p>This website is provided on an as-is basis. 3 Percent Global Inc. makes no warranties, expressed or implied, regarding the accuracy or completeness of any content. The label shall not be liable for any damages arising from the use of this website.</p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function openModal(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.modal-overlay').forEach(function(o){o.classList.remove('open');});document.body.style.overflow='';}});
+document.querySelectorAll('.modal-overlay').forEach(function(o){o.addEventListener('click',function(e){if(e.target===o){closeModal(o.id);}});});
+</script>
+
 </body>
 </html>
