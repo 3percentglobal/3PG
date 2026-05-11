@@ -155,17 +155,18 @@ function closeMob(){
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal('ms')">&#10005; Close</button>
     <div class="modal-title">Sovereignty</div>
-    <div class="modal-sub">3 Percent Global Inc. &mdash; Core Principle</div>
+    <div class="modal-sub">3 Percent Global Inc.</div>
     <div class="modal-body">
       <p>Sovereignty is not a word we use lightly. It is the foundation on which every decision at 3 Percent Global is made. Every master owned. Every contract built on equity. Every deal structured to serve the creator &mdash; not extract from them.</p>
       <h3>Master Ownership</h3>
-      <p>Every artist signed to 3PG retains full ownership of their master recordings. The label holds the rights corporately &mdash; but the artist, as founder or signee, benefits directly from the value those masters generate. No external party owns what we build.</p>
-      <h3>Publishing Control</h3>
-      <p>3 Percent Global is a registered publisher with SOCAN. The 50% publisher share on every composition stays within the ecosystem &mdash; not in the black boxes of intermediaries. Every stream, every radio spin, every sync generates revenue that comes back to the creators.</p>
+      <p>Every artist within the 3PG ecosystem owns what they create. This is not a courtesy &mdash; it is a structural requirement. No external party holds rights over what is built here.</p>
+      <h3>No Permission Required</h3>
+      <p>3PG was built to eliminate the need to ask for permission &mdash; from labels, from systems, from anyone. The infrastructure exists so that creators can operate at the highest level on their own terms.</p>
       <h3>The 3% Standard</h3>
       <p>Every partnership, every deal, every collaboration is evaluated against one question: does this serve the long-term sovereignty of the creators involved? If the answer is no &mdash; we don't do it.</p>
     </div>
   </div>
+</div>
 </div>
 <div class="modal-overlay" id="mp">
   <div class="modal-box">
@@ -226,18 +227,17 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.qu
 document.querySelectorAll('.modal-overlay').forEach(function(o){o.addEventListener('click',function(e){if(e.target===o){closeModal(o.id);}});});
 </script>
 
+
 <script>
 (function(){
 var CID="f60efeafaa0d475a8d8c2796c9b3010a",CS="20bef5731e9849c988948f63475b2db3",AID="6AWsl1xDv2sVXnWjBPgR7q";
 var activeFilter="all",albums=[];
 window.filterCat=function(btn,type){
   document.querySelectorAll(".fbtn").forEach(function(b){b.classList.remove("active");});
-  btn.classList.add("active");
-  activeFilter=type;render();
+  btn.classList.add("active");activeFilter=type;render();
 };
 function render(){
-  var box=document.getElementById("freq-catalogue");
-  if(!box)return;
+  var box=document.getElementById("freq-catalogue");if(!box)return;
   var list=albums.filter(function(a){return activeFilter==="all"||a.album_type===activeFilter;});
   if(!list.length){box.innerHTML='<div style="padding:20px 0;font-family:'Space Mono',monospace;font-size:8px;letter-spacing:0.3em;color:var(--text-dim);text-transform:uppercase;">No releases in this category.</div>';return;}
   var h="";
@@ -253,7 +253,7 @@ function render(){
   });
   box.innerHTML=h;
 }
-fetch("https://accounts.spotify.com/api/token",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded","Accept":"application/json"},body:"grant_type=client_credentials&client_id="+CID+"&client_secret="+CS})
+fetch("https://accounts.spotify.com/api/token",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:"grant_type=client_credentials&client_id="+CID+"&client_secret="+CS})
 .then(function(r){return r.json();})
 .then(function(d){
   if(!d.access_token)throw new Error("no token");
@@ -266,11 +266,7 @@ fetch("https://accounts.spotify.com/api/token",{method:"POST",headers:{"Content-
   albums=d.items.filter(function(a){if(seen[a.name])return false;seen[a.name]=true;return true;});
   render();
 })
-.catch(function(e){
-  console.error(e);
-  var box=document.getElementById("freq-catalogue");
-  if(box)box.innerHTML='<div style="padding:20px 0;font-family:'Space Mono',monospace;font-size:8px;letter-spacing:0.3em;color:var(--text-dim);text-transform:uppercase;">Catalogue loading...</div>';
-});
+.catch(function(e){console.error(e);});
 })();
 </script>
 </body>
