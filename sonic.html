@@ -96,6 +96,18 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 .modal-body ul{margin:0 0 16px 20px;}
 .modal-body ul li{font-size:13px;line-height:2;color:var(--text);}
 
+
+.sonic-embeds{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1px;background:var(--border);}
+.sonic-embed-item{background:var(--black);padding:36px;transition:background 0.3s;}
+.sonic-embed-item:hover{background:var(--surface);}
+.sonic-embed-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+.sonic-embed-tag{font-family:'Space Mono',monospace;font-size:7px;letter-spacing:0.35em;color:var(--text-dim);text-transform:uppercase;}
+.sonic-embed-status{font-family:'Space Mono',monospace;font-size:7px;letter-spacing:0.3em;color:var(--text-dim);border:1px solid var(--border);padding:4px 10px;text-transform:uppercase;}
+.sonic-embed-status.av{color:var(--text-bright);border-color:var(--text-dim);}
+.sonic-embed-status.coming{color:var(--text-dim);}
+.sonic-embed-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:var(--white);margin-bottom:8px;}
+.sonic-embed-artist{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:0.28em;color:var(--text-dim);text-transform:uppercase;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicGroup","name":"Rosalvo","url":"https://3percent.global","isni":"0000 0005 2954 2695","sameAs":["https://open.spotify.com/artist/6AWsl1xDv2sVXnWjBPgR7q","https://www.youtube.com/@Rosalvomusic","https://instagram.com/certifiedrosalvo"]}</script>
 </head>
@@ -121,24 +133,32 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
     <p class="lg">These are not products. They are transmissions.</p>
     <p>Every release from the 3PG catalogue is a deliberate act. A vibration sent into the world with intent. Masters fully owned. Every release sovereign. This is the record of what Rosalvo and 3 Percent Global have built &mdash; and what is still coming.</p>
   </div>
-  <div class="assets-grid" id="sonic-grid">
-    <div class="asset">
-      <div class="asset-cover"><img src="logo.png" alt="Asset"><span class="asset-badge">Coming Soon</span></div>
-      <div class="ai"><div class="asset-type">Project</div><div class="asset-title">Just Because I&rsquo;m Haytian II</div><div class="asset-artist">Rosalvo &middot; 3 Percent Global</div><p class="asset-desc">The continuation. Vol. 1 established the frequency. Vol. 2 is the full transmission &mdash; deeper roots, wider reach, zero compromise. Caribbean collaborations. Immersive visuals. The next chapter of a movement that was never meant to stop.</p><div class="asset-meta">Format: Project</div><div class="asset-links"><a href="#" class="lk pr">Stay Aligned</a></div></div>
-    </div>
-    <div class="asset">
-      <div class="asset-cover"><img src="logo.png" alt="Asset"><span class="asset-badge av">Available Now</span></div>
-      <div class="ai"><div class="asset-type">Album</div><div class="asset-title">Just Because I&rsquo;m Haytian: Troubatrap Konpa Deluxe</div><div class="asset-artist">Rosalvo &middot; 3 Percent Global</div><p class="asset-desc">The full statement. A transmission fusing twoubadou, konpa, zouk, and trap into something the world had no name for until Rosalvo named it. Masters fully owned. Every note sovereign.</p><div class="asset-meta">Format: Album</div><div class="asset-date">2024</div><div class="asset-links"><a href="https://open.spotify.com/artist/rosalvo" target="_blank" class="lk pr">Stream on Spotify</a><a href="#" class="lk">Apple Music</a></div></div>
-    </div>
-    <div class="asset">
-      <div class="asset-cover"><img src="logo.png" alt="Asset"><span class="asset-badge av">Available Now</span></div>
-      <div class="ai"><div class="asset-type">Single</div><div class="asset-title">Lajan feat. Marginal</div><div class="asset-artist">Rosalvo &middot; 3 Percent Global</div><p class="asset-desc">The Caribbean signal. &ldquo;Lajan&rdquo; marks the expansion of the 3PG frequency into the islands &mdash; a collaboration that bridges Montreal and the Caribbean in one track.</p><div class="asset-meta">Format: Single &middot; Feat. Marginal</div><div class="asset-date">2025</div><div class="asset-links"><a href="#" class="lk pr">Stream Now</a><a href="#" class="lk">Watch Video</a></div></div>
-    </div>
-    <div class="asset">
-      <div class="asset-cover"><img src="logo.png" alt="Asset"><span class="asset-badge av">Available Now</span></div>
-      <div class="ai"><div class="asset-type">EP</div><div class="asset-title">Troubatrap</div><div class="asset-artist">Rosalvo &middot; 3 Percent Global</div><p class="asset-desc">The single that gave the genre its name. A declaration built from the ground up &mdash; twoubadou, konpa, and trap compressed into one transmission. The origin point.</p><div class="asset-meta">Format: Single &middot; Produced by Lens Dupuy</div><div class="asset-date">2024</div><div class="asset-links"><a href="#" class="lk pr">Stream Now</a></div></div>
-    </div>
+  <div class="assets-grid" id="sonic-grid"><div class="sonic-loading">Loading catalogue...</div></div>
+    <div class="sonic-embed-title">Just Because I&rsquo;m Haytian II</div>
+    <div class="sonic-embed-artist">Rosalvo &middot; 3 Percent Global</div>
   </div>
+  <div class="sonic-embed-item">
+    <div class="sonic-embed-label">
+      <span class="sonic-embed-tag">Album &mdash; 2024</span>
+      <span class="sonic-embed-status av">Available Now</span>
+    </div>
+    <iframe style="border-radius:8px" src="https://open.spotify.com/embed/album/6gTEMbLGfMFRr04KNqEWAL?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+  <div class="sonic-embed-item">
+    <div class="sonic-embed-label">
+      <span class="sonic-embed-tag">Single &mdash; 2025</span>
+      <span class="sonic-embed-status av">Available Now</span>
+    </div>
+    <iframe style="border-radius:8px" src="https://open.spotify.com/embed/track/3eVjPpFEsOmfNAEeHi0gOh?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+  <div class="sonic-embed-item">
+    <div class="sonic-embed-label">
+      <span class="sonic-embed-tag">EP &mdash; 2024</span>
+      <span class="sonic-embed-status av">Available Now</span>
+    </div>
+    <iframe style="border-radius:8px" src="https://open.spotify.com/embed/album/1YASWZoRpLZmFLCVS8Vmwl?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+</div>
 
 <hr class="divider">
 <div class="sl">The Uniform</div>
@@ -245,43 +265,39 @@ document.querySelectorAll('.modal-overlay').forEach(function(o){o.addEventListen
 
 
 <script>
+</script>
+<script>
+function openCard(el){window.open(el.getAttribute("data-url"),"_blank");}
 (function(){
-var CID="f60efeafaa0d475a8d8c2796c9b3010a",CS="20bef5731e9849c988948f63475b2db3",AID="6AWsl1xDv2sVXnWjBPgR7q";
-var box=document.getElementById("sonic-grid");
-if(!box)return;
-fetch("https://accounts.spotify.com/api/token",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:"grant_type=client_credentials&client_id="+CID+"&client_secret="+CS})
-.then(function(r){return r.json();})
-.then(function(d){
-  if(!d.access_token)throw new Error("no token");
-  return fetch("https://api.spotify.com/v1/artists/"+AID+"/albums?include_groups=album,single,ep&market=CA&limit=50",{headers:{"Authorization":"Bearer "+d.access_token}});
-})
-.then(function(r){return r.json();})
-.then(function(d){
-  if(!d.items||!d.items.length){box.innerHTML='<div class="sonic-loading">No releases found.</div>';return;}
-  var seen={},list=d.items.filter(function(a){if(seen[a.name])return false;seen[a.name]=true;return true;});
-  var h="";
-  list.forEach(function(a){
-    var yr=a.release_date?a.release_date.slice(0,4):"";
-    var type=a.album_type[0].toUpperCase()+a.album_type.slice(1);
-    var url=(a.external_urls&&a.external_urls.spotify)?a.external_urls.spotify:"#";
-    var cover=(a.images&&a.images[0])?a.images[0].url:"";
-    var avail=new Date(a.release_date)<=new Date();
-    h+='<div class="sonic-card" onclick="window.open(this.dataset.url,'_blank')" data-url="'+url+'">';
-    h+='<div class="sonic-cover">';
-    if(cover)h+='<img src="'+cover+'" alt="cover">';
-    else h+='<img src="logo.png" alt="3PG" class="sonic-cover-placeholder">';
-    h+='<span class="sonic-badge'+(avail?' av':'')+'">'+( avail?'Available Now':'Coming Soon')+'</span>';
-    h+='</div><div class="sonic-info">';
-    h+='<div class="sonic-type">'+type+'</div>';
-    h+='<div class="sonic-title">'+a.name+'</div>';
-    h+='<div class="sonic-artist">Rosalvo &#8471; 3 Percent Global</div>';
-    if(yr)h+='<div class="sonic-year">'+yr+'</div>';
-    if(avail)h+='<a href="'+url+'" target="_blank" class="sonic-btn" onclick="event.stopPropagation()">Stream Now</a>';
-    h+='</div></div>';
-  });
-  box.innerHTML=h;
-})
-.catch(function(e){console.error(e);box.innerHTML='<div class="sonic-loading">Catalogue loading...</div>';});
+  var box=document.getElementById("sonic-grid");
+  if(!box)return;
+  fetch("/api/spotify")
+  .then(function(r){return r.json();})
+  .then(function(d){
+    if(!d.albums||!d.albums.length){box.innerHTML='<div class="sonic-loading">Catalogue loading...</div>';return;}
+    var h="";
+    d.albums.forEach(function(a){
+      var yr=a.release_date?a.release_date.slice(0,4):"";
+      var type=a.album_type[0].toUpperCase()+a.album_type.slice(1);
+      var url=(a.external_urls&&a.external_urls.spotify)?a.external_urls.spotify:"#";
+      var cover=(a.images&&a.images[0])?a.images[0].url:"";
+      var avail=new Date(a.release_date)<=new Date();
+      h+='<div class="sonic-card" onclick="openCard(this)" data-url="'+url+'">';
+      h+='<div class="sonic-cover">';
+      if(cover)h+='<img src="'+cover+'" alt="cover">';
+      else h+='<img src="logo.png" alt="3PG" class="sonic-cover-placeholder">';
+      h+='<span class="sonic-badge'+(avail?' av':'')+'">'+( avail?'Available Now':'Coming Soon')+'</span>';
+      h+='</div><div class="sonic-info">';
+      h+='<div class="sonic-type">'+type+'</div>';
+      h+='<div class="sonic-title">'+a.name+'</div>';
+      h+='<div class="sonic-artist">Rosalvo &#8471; 3 Percent Global</div>';
+      if(yr)h+='<div class="sonic-year">'+yr+'</div>';
+      if(avail)h+='<a href="'+url+'" target="_blank" class="sonic-btn" onclick="event.stopPropagation()">Stream Now</a>';
+      h+='</div></div>';
+    });
+    box.innerHTML=h;
+  })
+  .catch(function(){box.innerHTML='<div class="sonic-loading">Catalogue loading...</div>';});
 })();
 </script>
 </body>
