@@ -166,7 +166,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;o
 </style>
 </head>
 <body>
-<script>if(sessionStorage.getItem("3pg_entered")&&(window.location.pathname==="/"||window.location.pathname==="/index.html"||window.location.pathname==="")){var _iw=document.getElementById("intro-wrap");if(_iw)_iw.style.display="none";var _sw=document.getElementById("site-wrap");if(_sw){_sw.style.opacity="1";_sw.style.visibility="visible";}}</script>
+<script>if(sessionStorage.getItem("3pg_entered")&&(window.location.pathname==="/"||window.location.pathname==="/index.html"||window.location.pathname==="")){var _iw=document.getElementById("intro-wrap");if(_iw)_iw.style.display="none";var _sw=document.getElementById("site");if(_sw){_sw.classList.add("visible");}}</script>
 <div class="mobile-menu" id="mob-menu"><button class="mob-close" onclick="closeMob()">&#10005; Close</button><a href="index.html" onclick="closeMob()">Home</a><a href="fleet.html" onclick="closeMob()">The Fleet</a><a href="sonic.html" onclick="closeMob()">Sonic Assets</a><a href="intel.html" onclick="closeMob()">Intel</a><a href="headquarters.html" onclick="closeMob()">Headquarters</a><a href="frequency.html" onclick="closeMob()">Frequency</a><a href="vault.html" onclick="closeMob()">The Vault</a><a href="heritage.html" onclick="closeMob()">Heritage</a><a href="archive.html" onclick="closeMob()">Archive</a><a href="access.html" onclick="closeMob()">Access</a><a href="https://tms.3percent.global" target="_blank" onclick="closeMob()">Certified</a></div>
 <div id="intro"><img id="intro-logo" src="logo.png" alt="3PG" class="beating"><div class="enter-btn" onclick="sessionStorage.setItem('3pg_entered','1');startEnter()"><span class="enter-label">Enter</span><div class="pb-track"><div class="pb-fill" id="pb-fill"></div></div></div></div>
 <div id="site">
@@ -223,7 +223,8 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;o
 <footer><div class="footer-logo"><img src="logo.png" alt="3PG"><span class="footer-name">3 Percent Global Inc.</span></div><ul class="footer-links"><li><a onclick="openModal('ms')" style="cursor:pointer;">Sovereignty</a></li><li><a onclick="openModal('mp')" style="cursor:pointer;">Publishing</a></li><li><a onclick="openModal('ml')" style="cursor:pointer;">Licensing</a></li><li><a onclick="openModal('mt')" style="cursor:pointer;">Terms</a></li></ul><span class="footer-copy">&#8471; 2026 3 Percent Global Inc.</span></footer>
 </div>
 <script>
-function startEnter(){ sessionStorage.setItem("3pg_entered","1"); {
+function startEnter(){
+  sessionStorage.setItem("3pg_entered","1");
   var logo = document.getElementById("intro-logo");
   var fill = document.getElementById("pb-fill");
   if (!logo || !fill) return;
