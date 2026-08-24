@@ -1,0 +1,14 @@
+{
+  "name": "3pg",
+  "version": "1.0.0",
+  "description": "3 Percent Global Inc. - Montreal-based holding company and Global Sovereignty Infrastructure",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Static HTML site - no dev server configured'",
+    "build": "echo 'Static HTML site - no build step required'",
+    "lint": "echo 'Linting not configured for static HTML'"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.1.0"
+  }
+}
